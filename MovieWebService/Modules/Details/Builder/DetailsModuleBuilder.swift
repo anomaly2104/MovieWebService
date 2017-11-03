@@ -10,7 +10,7 @@ import UIKit
 
 @objc class DetailsModuleBuilder: NSObject {
 
-    func build(with data: Any) -> UIViewController {
+    func build(withMovieName movieName: String) -> UIViewController {
 
         let viewController = DetailsViewController()
 
@@ -21,12 +21,13 @@ import UIKit
         presenter.view = viewController
         presenter.router = router
 
-        let interactor = DetailsInteractor()
+        let dataStore = DataStore()
+        
+        let interactor = DetailsInteractor(withMovieName: movieName, dataStore: dataStore)
         interactor.output = presenter
 
         presenter.interactor = interactor
         viewController.output = presenter
-        viewController.director = data as? Director
 
         return viewController
     }

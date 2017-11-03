@@ -79,8 +79,8 @@ static NSString * const MoviesListCellIdentifier = @"MoviesListCell";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    Film *film = self.moviesList[indexPath.row];
-    //TODO: Present details view controller for this film here.
+    MoviesListDisplayItem *displayItem = self.moviesList[indexPath.row];
+    [self.output selecteMovie:displayItem];
 }
 
 @end

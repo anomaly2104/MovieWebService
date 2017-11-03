@@ -29,6 +29,10 @@
     [self.interactor findMoviesList];
 }
 
+- (void)selecteMovie:(MoviesListDisplayItem *)movieListDisplayItem {
+    [self.router presentMovieDetailInterfaceForMovieWithName:movieListDisplayItem.name];
+}
+
 #pragma mark - Методы MoviesListInteractorOutput
 
 - (void)foundMoviesList:(NSArray *)moviesList {

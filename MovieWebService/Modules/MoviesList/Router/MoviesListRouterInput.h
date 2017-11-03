@@ -10,4 +10,6 @@
 
 @protocol MoviesListRouterInput <NSObject>
 
+- (void)presentMovieDetailInterfaceForMovieWithName:(NSString *)movieName;
+
 @end

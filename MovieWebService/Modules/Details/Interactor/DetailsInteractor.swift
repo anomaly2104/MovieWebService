@@ -7,11 +7,19 @@
 //
 
 class DetailsInteractor: DetailsInteractorInput {
-
+    var movieName: String
+    var dataStore: DataStore
     weak var output: DetailsInteractorOutput!
-
+    
+    
+    init(withMovieName movieName: String, dataStore: DataStore) {
+        self.movieName = movieName
+        self.dataStore = dataStore;
+    }
+    
     // MARK: - DetailsInteractorInput
     
-    
-    
+    func findMovie() {
+        
+    }
 }

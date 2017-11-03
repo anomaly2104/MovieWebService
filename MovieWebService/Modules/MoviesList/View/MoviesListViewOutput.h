@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
-#import "Film.h"
+
+@class MoviesListDisplayItem;
 
 @protocol MoviesListViewOutput <NSObject>
 
 - (void)updateView;
+- (void)selecteMovie:(MoviesListDisplayItem *)movieListDisplayItem;
 
 @end
