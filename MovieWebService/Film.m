@@ -38,7 +38,7 @@
 
 - (void)setName:(NSString *)name {
     if (name != _name) {
-        name = _name;
+        _name = name;
     }
 }
 
