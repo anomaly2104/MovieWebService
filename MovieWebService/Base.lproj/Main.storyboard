@@ -99,19 +99,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Director Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yb2-Ls-5Xx">
-                                <rect key="frame" x="17" y="28" width="342" height="22"/>
+                                <rect key="frame" x="17" y="40" width="342" height="22"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uj5-qt-RB1">
-                                <rect key="frame" x="17" y="58" width="342" height="21"/>
+                                <rect key="frame" x="17" y="70" width="342" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap here to show more" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aFx-G4-sHq">
-                                <rect key="frame" x="17" y="109" width="342" height="21"/>
+                                <rect key="frame" x="17" y="121" width="342" height="21"/>
                                 <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -121,7 +121,7 @@
                                 </connections>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3xw-Lm-mkc">
-                                <rect key="frame" x="17" y="142" width="342" height="128"/>
+                                <rect key="frame" x="17" y="154" width="342" height="128"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Actor Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oiq-QI-eL1">
                                         <rect key="frame" x="0.0" y="0.0" width="342" height="21.5"/>
@@ -172,7 +172,7 @@
                             <constraint firstItem="3xw-Lm-mkc" firstAttribute="trailing" secondItem="aFx-G4-sHq" secondAttribute="trailing" id="2hf-UN-QH9"/>
                             <constraint firstItem="aFx-G4-sHq" firstAttribute="trailing" secondItem="Uj5-qt-RB1" secondAttribute="trailing" id="2sE-1M-N1p"/>
                             <constraint firstItem="Uj5-qt-RB1" firstAttribute="top" secondItem="Yb2-Ls-5Xx" secondAttribute="bottom" constant="8" id="5Op-uc-Sgi"/>
-                            <constraint firstItem="Yb2-Ls-5Xx" firstAttribute="top" secondItem="vCR-HB-lDH" secondAttribute="bottom" constant="8" id="8S3-6P-RKH"/>
+                            <constraint firstItem="Yb2-Ls-5Xx" firstAttribute="top" secondItem="vCR-HB-lDH" secondAttribute="bottom" constant="20" id="8S3-6P-RKH"/>
                             <constraint firstItem="Uj5-qt-RB1" firstAttribute="leading" secondItem="Yb2-Ls-5Xx" secondAttribute="leading" id="E5e-AM-f46"/>
                             <constraint firstItem="aFx-G4-sHq" firstAttribute="leading" secondItem="Uj5-qt-RB1" secondAttribute="leading" id="Gcb-Lh-VGG"/>
                             <constraint firstItem="Yb2-Ls-5Xx" firstAttribute="leading" secondItem="6mu-b4-gTB" secondAttribute="leadingMargin" constant="1" id="VcE-lq-8rq"/>
