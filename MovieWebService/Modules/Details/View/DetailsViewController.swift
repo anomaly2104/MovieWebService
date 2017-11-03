@@ -63,7 +63,7 @@ class DetailsViewController: UIViewController, DetailsViewInput, TappableLabelDe
             DispatchQueue.main.async { [weak self] in
                 if let sself = self {
                     sself.directorNameValue.text = movie.director.name
-                    if let actor = movie.cast?.firstObject as? Actor {
+                    if let actor = movie.cast.first {
                         sself.actorName.text = actor.name
                         sself.actorScreenName.text = actor.screenName
                     }
