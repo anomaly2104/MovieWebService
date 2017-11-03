@@ -1,15 +1,18 @@
 PODS:
   - DateTools (2.0.0)
   - Masonry (1.1.0)
+  - TDTChocolate/FoundationAdditions (2.12.0)
 
 DEPENDENCIES:
   - DateTools
   - Masonry
+  - TDTChocolate/FoundationAdditions
 
 SPEC CHECKSUMS:
   DateTools: 933ac9c490f21f92127cf690ccd8c397e0126caf
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  TDTChocolate: cfe420907e309b3e70ef31189f036aecee8cd21e
 
-PODFILE CHECKSUM: a76418272816a1954df1e89f6abf710a973cb10e
+PODFILE CHECKSUM: ac3d5f02c369144ec7a6870c970771e05a3172a1
 
 COCOAPODS: 1.3.1

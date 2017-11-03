@@ -11,7 +11,7 @@
 #import <DateTools/DateTools.h>
 #import "MoviesListViewOutput.h"
 #import "AppDelegate.h"
-#import "Film.h"
+#import "MoviesListDisplayItem.h"
 
 static NSString * const MoviesListCellIdentifier = @"MoviesListCell";
 
@@ -66,25 +66,11 @@ static NSString * const MoviesListCellIdentifier = @"MoviesListCell";
   [tableView dequeueReusableCellWithIdentifier:MoviesListCellIdentifier
                                   forIndexPath:indexPath];
   
-  Film *film = self.moviesList[indexPath.row];
-  cell.name.text = film.name;
-  cell.date.text = [film.releaseDate formattedDateWithStyle:NSDateFormatterLongStyle];
-  
-  NSString *filmRatingText;
-  switch (film.filmRating) {
-    case G:
-      filmRatingText = @"G";
-    case PG:
-      filmRatingText = @"PG";
-    case PG13:
-      filmRatingText = @"PG13";
-    case R:
-      filmRatingText = @"R";
-    default:
-      break;
-  }
-  cell.filmRating.text = filmRatingText;
-  cell.rating.text = [[NSNumber numberWithInteger:film.rating] stringValue];
+  MoviesListDisplayItem *displayItem = self.moviesList[indexPath.row];
+  cell.name.text = displayItem.name;
+  cell.date.text = displayItem.releaseDate;
+  cell.filmRating.text = displayItem.filmRating;
+  cell.rating.text = displayItem.rating;
   
   return cell;
 }

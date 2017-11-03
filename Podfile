@@ -8,6 +8,7 @@ target ‘MovieWebService’ do
   # Pods for MovieWebService
   pod 'Masonry'
   pod 'DateTools'
+  pod 'TDTChocolate/FoundationAdditions', :inhibit_warnings => true
 
   target ‘MovieWebServiceTests' do
     inherit! :search_paths

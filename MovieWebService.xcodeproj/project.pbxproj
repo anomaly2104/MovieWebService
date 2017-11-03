@@ -43,6 +43,8 @@
 		BC4A6E017108906463B7D6EF /* MoviesListInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = F04B81BB8E069391AC58935D /* MoviesListInteractor.m */; };
 		C7DB85D5B1453F3151459F19 /* DetailsViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D852298DA083746EF65D02 /* DetailsViewOutput.swift */; };
 		D8BF340B1715D2CCC3DEB3B3 /* DetailsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BEC664098EA97453E0ECBD /* DetailsPresenterTests.swift */; };
+		DD6D955C1FACFB3F00305B20 /* MoviesListDisplayItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6D955B1FACFB3F00305B20 /* MoviesListDisplayItem.m */; };
+		DD6D95601FAD029C00305B20 /* Film+DisplayAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6D955F1FAD029C00305B20 /* Film+DisplayAdditions.m */; };
 		E2172FD11664F9A934E6AFB4 /* DetailsModuleBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF463CEF7112C249D34D15F /* DetailsModuleBuilderTests.swift */; };
 		EC2947B31729FA900482C447 /* MoviesListRouterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CB097161497F44CADFFFFA /* MoviesListRouterTests.m */; };
 		ECF6ADAC4D6A9543F0896D1F /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39CE7C8FB3C38D6D501CE54 /* DetailsViewController.swift */; };
@@ -135,6 +137,10 @@
 		D0694EA765A10A05BD4473FE /* DetailsInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DetailsInteractorInput.swift; sourceTree = "<group>"; };
 		D39CE7C8FB3C38D6D501CE54 /* DetailsViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		D3E495E73D8E0AC15D5596F4 /* MoviesListInteractorOutput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MoviesListInteractorOutput.h; sourceTree = "<group>"; };
+		DD6D955A1FACFB3F00305B20 /* MoviesListDisplayItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviesListDisplayItem.h; sourceTree = "<group>"; };
+		DD6D955B1FACFB3F00305B20 /* MoviesListDisplayItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviesListDisplayItem.m; sourceTree = "<group>"; };
+		DD6D955E1FAD029C00305B20 /* Film+DisplayAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Film+DisplayAdditions.h"; sourceTree = "<group>"; };
+		DD6D955F1FAD029C00305B20 /* Film+DisplayAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Film+DisplayAdditions.m"; sourceTree = "<group>"; };
 		DDDC59E41FA752CD0024D83A /* Movie-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Movie-Bridging-Header.h"; path = "Supporting Files/Movie-Bridging-Header.h"; sourceTree = "<group>"; };
 		DF2595CF7BC69741655A3A5D /* MoviesListPresenter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MoviesListPresenter.m; sourceTree = "<group>"; };
 		EE9B955A840DCAA8F533B7A8 /* DetailsViewTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DetailsViewTests.swift; sourceTree = "<group>"; };
@@ -385,6 +391,8 @@
 				742C64371E9C913200B8E327 /* GenericRole.m */,
 				742C64391E9C917B00B8E327 /* Director.h */,
 				742C643A1E9C917B00B8E327 /* Director.m */,
+				DD6D955E1FAD029C00305B20 /* Film+DisplayAdditions.h */,
+				DD6D955F1FAD029C00305B20 /* Film+DisplayAdditions.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -485,6 +493,8 @@
 				35CD0B96AAC58C1A4D7EC3CE /* MoviesListModuleInput.h */,
 				15A77123BE1C7D757A21CCDA /* MoviesListPresenter.h */,
 				DF2595CF7BC69741655A3A5D /* MoviesListPresenter.m */,
+				DD6D955A1FACFB3F00305B20 /* MoviesListDisplayItem.h */,
+				DD6D955B1FACFB3F00305B20 /* MoviesListDisplayItem.m */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -789,11 +799,13 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-MovieWebService/Pods-MovieWebService-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/DateTools/DateTools.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/TDTChocolate/TDTChocolate.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DateTools.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TDTChocolate.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -834,6 +846,8 @@
 				BC4A6E017108906463B7D6EF /* MoviesListInteractor.m in Sources */,
 				F431DAFBD7C87A621115DB69 /* MoviesListRouter.m in Sources */,
 				742C643F1E9CCDB600B8E327 /* TappableLabel.m in Sources */,
+				DD6D95601FAD029C00305B20 /* Film+DisplayAdditions.m in Sources */,
+				DD6D955C1FACFB3F00305B20 /* MoviesListDisplayItem.m in Sources */,
 				742C64261E9C7A3900B8E327 /* MoviesListBuilder.m in Sources */,
 				3E428908FB520AB4DF020ACC /* DetailsViewInput.swift in Sources */,
 				C7DB85D5B1453F3151459F19 /* DetailsViewOutput.swift in Sources */,
