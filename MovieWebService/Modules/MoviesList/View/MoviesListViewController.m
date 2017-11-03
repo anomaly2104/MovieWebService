@@ -52,7 +52,9 @@ static NSString * const MoviesListCellIdentifier = @"MoviesListCell";
 #pragma mark - MoviesListViewInput
 
 - (void)showMoviesList:(NSArray *)moviesList {
-    self.moviesList = moviesList;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.moviesList = moviesList;
+    });
 }
 
 #pragma mark - UITableViewDataSource
