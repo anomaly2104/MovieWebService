@@ -19,6 +19,7 @@ class DetailsPresenter: DetailsModuleInput, DetailsViewOutput, DetailsInteractor
     }
     
     // MARK: - DetailsInteractorOutput
+    
     func foundMovie(movie: Film?) {
         view.showDetailsForMovie(movie: movie)
     }
