@@ -17,9 +17,7 @@
 - (void)presentMovieDetailInterfaceForMovieWithName:(NSString *)movieName {
     DetailsModuleBuilder *detailBuilder = [DetailsModuleBuilder new];
     UIViewController *detailViewController = [detailBuilder buildWithMovieName:movieName];
-    [self.viewController presentViewController:detailViewController
-                                      animated:YES
-                                    completion:nil];
+    [self.viewController showViewController:detailViewController sender:self.viewController];
 }
 
 @end
