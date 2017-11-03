@@ -28,17 +28,16 @@ static NSString * const MoviesListCellIdentifier = @"MoviesListCell";
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
-
-    [self.output didTriggerViewReadyEvent];
+    [self configureView];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
-    [appDelegate getFilmWithCallback:^(Film *film) {
-      dispatch_async(dispatch_get_main_queue(), ^{
-        self.moviesList = @[film];
-      });
-    }];
+    [self.output updateView];
+}
+
+- (void)configureView {
+    self.navigationItem.title = @"RootViewController";
+    self.view.backgroundColor = [UIColor whiteColor];
 }
 
 #pragma mark - Setters
@@ -52,9 +51,8 @@ static NSString * const MoviesListCellIdentifier = @"MoviesListCell";
 
 #pragma mark - MoviesListViewInput
 
-- (void)setupInitialState {
-    self.navigationItem.title = @"RootViewController";
-    self.view.backgroundColor = [UIColor whiteColor];
+- (void)showMoviesList:(NSArray *)moviesList {
+    self.moviesList = moviesList;
 }
 
 #pragma mark - UITableViewDataSource

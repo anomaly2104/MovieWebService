@@ -12,9 +12,7 @@
 #import "MoviesListInteractorInput.h"
 #import "MoviesListRouterInput.h"
 
-@implementation MoviesListPresenter {
-    NSArray *films;
-}
+@implementation MoviesListPresenter
 
 #pragma mark - Методы MoviesListModuleInput
 
@@ -23,10 +21,14 @@
 
 #pragma mark - Методы MoviesListViewOutput
 
-- (void)didTriggerViewReadyEvent {
-	[self.view setupInitialState];
+- (void)updateView {
+    [self.interactor findMoviesList];
 }
 
 #pragma mark - Методы MoviesListInteractorOutput
+
+- (void)foundMoviesList:(NSArray *)moviesList {
+    [self.view showMoviesList:moviesList];
+}
 
 @end

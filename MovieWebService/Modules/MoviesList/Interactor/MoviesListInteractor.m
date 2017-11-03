@@ -19,4 +19,12 @@
 
 #pragma mark - MoviesListInteractorInput
 
+- (void)findMoviesList {
+    __weak typeof(self) welf = self;
+    AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    [appDelegate getFilmWithCallback:^(Film *film) {
+        [welf.output foundMoviesList:@[film]];
+    }];
+}
+
 @end
