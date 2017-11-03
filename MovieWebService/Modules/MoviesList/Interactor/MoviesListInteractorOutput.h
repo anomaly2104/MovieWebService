@@ -10,4 +10,6 @@
 
 @protocol MoviesListInteractorOutput <NSObject>
 
+- (void)foundMoviesList:(NSArray *)moviesList;
+
 @end
