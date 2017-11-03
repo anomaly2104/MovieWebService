@@ -8,10 +8,13 @@
 
 #import "MoviesListInteractorInput.h"
 
+@class DataStore;
+
 @protocol MoviesListInteractorOutput;
 
 @interface MoviesListInteractor : NSObject <MoviesListInteractorInput>
 
 @property (nonatomic, weak) id<MoviesListInteractorOutput> output;
+@property (nonatomic) DataStore *dataStore;
 
 @end

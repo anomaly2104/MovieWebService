@@ -14,6 +14,7 @@
 #import "AppDelegate.h"
 #import "MovieWebService-Swift.h"
 #import <DateTools/NSDate+DateTools.h>
+#import "DataStore.h"
 
 @implementation MoviesListInteractor
 
@@ -21,9 +22,8 @@
 
 - (void)findMoviesList {
     __weak typeof(self) welf = self;
-    AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
-    [appDelegate getFilmWithCallback:^(Film *film) {
-        [welf.output foundMoviesList:@[film]];
+    [self.dataStore getMoviesWithCallback:^(NSArray<Film *> *movies) {
+        [welf.output foundMoviesList:movies];
     }];
 }
 

@@ -12,6 +12,7 @@
 #import "MoviesListInteractor.h"
 #import "MoviesListPresenter.h"
 #import "MoviesListRouter.h"
+#import "DataStore.h"
 
 static NSString *MoviesListControllerIdentifier = @"MoviesListController";
 
@@ -30,6 +31,7 @@ static NSString *MoviesListControllerIdentifier = @"MoviesListController";
 
     MoviesListInteractor *interactor = [MoviesListInteractor new];
     interactor.output = presenter;
+    interactor.dataStore = [DataStore new];
     presenter.interactor = interactor;
     viewController.output = presenter;
     
