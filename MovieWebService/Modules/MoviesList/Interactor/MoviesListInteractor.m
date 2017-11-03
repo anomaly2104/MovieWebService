@@ -13,6 +13,7 @@
 #import "Masonry.h"
 #import "AppDelegate.h"
 #import "MovieWebService-Swift.h"
+#import <DateTools/NSDate+DateTools.h>
 
 @implementation MoviesListInteractor {
     UITableView *tableView;
@@ -56,15 +57,8 @@
     }
     Film *film = [films objectAtIndex:indexPath.row];
     cell.name.text = film.name;
-
-    NSCalendar* cal = [NSCalendar new];
-    NSString* dateText;
-    NSDateFormatter *f = [[NSDateFormatter alloc] init];
-    [f setCalendar:cal];
-    dateText = [f stringFromDate:film.releaseDate];
-
-    cell.date.text = dateText;
-
+    cell.date.text = [film.releaseDate formattedDateWithStyle:NSDateFormatterLongStyle];
+  
     NSString *filmRatingText;
     switch (film.filmRating) {
         case G:
