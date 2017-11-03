@@ -27,7 +27,7 @@ static NSString * const MoviesListCellIdentifier = @"MoviesListCell";
 #pragma mark - Life cycle
 
 - (void)viewDidLoad {
-	[super viewDidLoad];
+    [super viewDidLoad];
     [self configureView];
 }
 
@@ -43,10 +43,10 @@ static NSString * const MoviesListCellIdentifier = @"MoviesListCell";
 #pragma mark - Setters
 
 - (void)setMoviesList:(NSArray *)moviesList {
-  if (moviesList != _moviesList) {
-    _moviesList = moviesList;
-    [self.tableView reloadData];
-  }
+    if (moviesList != _moviesList) {
+        _moviesList = moviesList;
+        [self.tableView reloadData];
+    }
 }
 
 #pragma mark - MoviesListViewInput
@@ -58,29 +58,29 @@ static NSString * const MoviesListCellIdentifier = @"MoviesListCell";
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-  return self.moviesList.count;
+    return self.moviesList.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-  MoviesListTableViewCell * cell =
-  [tableView dequeueReusableCellWithIdentifier:MoviesListCellIdentifier
-                                  forIndexPath:indexPath];
-  
-  MoviesListDisplayItem *displayItem = self.moviesList[indexPath.row];
-  cell.name.text = displayItem.name;
-  cell.date.text = displayItem.releaseDate;
-  cell.filmRating.text = displayItem.filmRating;
-  cell.rating.text = displayItem.rating;
-  
-  return cell;
+    MoviesListTableViewCell * cell =
+    [tableView dequeueReusableCellWithIdentifier:MoviesListCellIdentifier
+                                    forIndexPath:indexPath];
+    
+    MoviesListDisplayItem *displayItem = self.moviesList[indexPath.row];
+    cell.name.text = displayItem.name;
+    cell.date.text = displayItem.releaseDate;
+    cell.filmRating.text = displayItem.filmRating;
+    cell.rating.text = displayItem.rating;
+    
+    return cell;
 }
 
 #pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-  [tableView deselectRowAtIndexPath:indexPath animated:YES];
-  Film *film = self.moviesList[indexPath.row];
-  //TODO: Present details view controller for this film here.
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    Film *film = self.moviesList[indexPath.row];
+    //TODO: Present details view controller for this film here.
 }
 
 @end
