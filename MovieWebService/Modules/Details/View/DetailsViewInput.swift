@@ -7,5 +7,5 @@
 //
 
 protocol DetailsViewInput: class {
-
+    func showDetailsForMovie(movie: Film?)
 }

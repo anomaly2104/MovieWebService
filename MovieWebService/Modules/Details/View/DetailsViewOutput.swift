@@ -8,6 +8,6 @@
 
 protocol DetailsViewOutput {
 
-    func viewIsReady()
+    func updateView()
 
 }

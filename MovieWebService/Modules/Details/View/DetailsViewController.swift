@@ -11,7 +11,6 @@ import UIKit
 class DetailsViewController: UIViewController, DetailsViewInput, TappableLabelDelegate {
 
     var output: DetailsViewOutput!
-    public var director: Director!
 
     var directorName: UILabel!
     var directorNameValue: UILabel!
@@ -23,7 +22,6 @@ class DetailsViewController: UIViewController, DetailsViewInput, TappableLabelDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        output.viewIsReady()
         view = UIView()
         view.backgroundColor = .white
 
@@ -35,7 +33,6 @@ class DetailsViewController: UIViewController, DetailsViewInput, TappableLabelDe
         directorNameValue = UILabel()
         view.addSubview(directorNameValue)
         directorNameValue.frame = CGRect(x: 20, y: 150, width: 200, height: 30)
-        directorNameValue.text = director.name;
 
         tapToShowMore = TappableLabel()
         view.addSubview(tapToShowMore)
@@ -52,15 +49,28 @@ class DetailsViewController: UIViewController, DetailsViewInput, TappableLabelDe
         actorScreenName.frame = CGRect(x: 20, y: 270, width: 200, height: 30)
         actorName.isHidden = true
         actorScreenName.isHidden = true
-
-        let actor: Actor = director.film.cast?[0] as! Actor
-        actorName.text = director.name;
-        actorScreenName.text = actor.screenName;
-
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        output.updateView()
     }
 
-
     // MARK: DetailsViewInput
+    
+    func showDetailsForMovie(movie movieOp: Film?) {
+        if let movie = movieOp {
+            DispatchQueue.main.async { [weak self] in
+                if let sself = self {
+                    sself.directorNameValue.text = movie.director.name
+                    if let actor = movie.cast?.firstObject as? Actor {
+                        sself.actorName.text = actor.name
+                        sself.actorScreenName.text = actor.screenName
+                    }
+                }
+            }
+        }
+    }
 
     func didReceiveTouch() {
         actorName.isHidden = false

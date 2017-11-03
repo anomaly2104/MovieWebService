@@ -14,12 +14,12 @@ class DetailsPresenter: DetailsModuleInput, DetailsViewOutput, DetailsInteractor
 
     // MARK: - DetailsViewOutput
     
-    func viewIsReady() {
-
+    func updateView() {
+        interactor.findMovie()
     }
     
     // MARK: - DetailsInteractorOutput
-    func foundMovie(movie: Film) {
-        
+    func foundMovie(movie: Film?) {
+        view.showDetailsForMovie(movie: movie)
     }
 }

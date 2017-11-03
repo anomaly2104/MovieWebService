@@ -7,5 +7,5 @@
 //
 
 protocol DetailsInteractorOutput: class {
-    func foundMovie(movie: Film)
+    func foundMovie(movie: Film?)
 }

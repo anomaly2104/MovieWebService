@@ -20,6 +20,8 @@ class DetailsInteractor: DetailsInteractorInput {
     // MARK: - DetailsInteractorInput
     
     func findMovie() {
-        
+        dataStore.getMovieWithName(movieName) { [weak self] (movie) in
+            self?.output.foundMovie(movie: movie)
+        }
     }
 }
