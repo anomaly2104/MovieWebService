@@ -10,10 +10,7 @@
 
 #import "MoviesListInteractorOutput.h"
 #import "Film.h"
-#import "Masonry.h"
 #import "AppDelegate.h"
-#import "MovieWebService-Swift.h"
-#import <DateTools/NSDate+DateTools.h>
 #import "DataStore.h"
 
 @implementation MoviesListInteractor
