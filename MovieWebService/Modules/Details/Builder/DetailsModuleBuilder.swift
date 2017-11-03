@@ -9,10 +9,11 @@
 import UIKit
 
 @objc class DetailsModuleBuilder: NSObject {
-
+    private let MovieDetailsViewControllerIdentifier = "MovieDetailsViewController"
+    
     func build(withMovieName movieName: String) -> UIViewController {
-
-        let viewController = DetailsViewController()
+        
+        let viewController = movieDetailViewControllerFromStoryboard()
 
         let router = DetailsRouter()
         router.viewController = viewController
@@ -31,5 +32,15 @@ import UIKit
 
         return viewController
     }
-
+    
+    func movieDetailViewControllerFromStoryboard() -> DetailsViewController {
+        let storyboard = mainStoryboard()
+        let viewController = storyboard.instantiateViewController(withIdentifier: MovieDetailsViewControllerIdentifier) as! DetailsViewController
+        return viewController
+    }
+    
+    func mainStoryboard() -> UIStoryboard {
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        return storyboard
+    }
 }

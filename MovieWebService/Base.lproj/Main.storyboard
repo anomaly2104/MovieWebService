@@ -86,5 +86,118 @@
             </objects>
             <point key="canvasLocation" x="-538.39999999999998" y="88.605697151424295"/>
         </scene>
+        <!--Details View Controller-->
+        <scene sceneID="eIp-JY-yjy">
+            <objects>
+                <viewController storyboardIdentifier="MovieDetailsViewController" id="3cv-Ec-Mja" customClass="DetailsViewController" customModule="MovieWebService" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vCR-HB-lDH"/>
+                        <viewControllerLayoutGuide type="bottom" id="dWL-IO-0x0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6mu-b4-gTB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Director Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yb2-Ls-5Xx">
+                                <rect key="frame" x="17" y="28" width="342" height="22"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uj5-qt-RB1">
+                                <rect key="frame" x="17" y="58" width="342" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap here to show more" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aFx-G4-sHq">
+                                <rect key="frame" x="17" y="109" width="342" height="21"/>
+                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="OVl-48-f8Y" appends="YES" id="3ZS-cd-gPQ"/>
+                                </connections>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3xw-Lm-mkc">
+                                <rect key="frame" x="17" y="142" width="342" height="128"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Actor Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oiq-QI-eL1">
+                                        <rect key="frame" x="0.0" y="0.0" width="342" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iIM-XC-Rci">
+                                        <rect key="frame" x="0.0" y="94.5" width="342" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Actor Screen Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eaL-AW-dlA">
+                                        <rect key="frame" x="0.0" y="62.5" width="342" height="22"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NSu-o3-Vbv">
+                                        <rect key="frame" x="0.0" y="29.5" width="342" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="NSu-o3-Vbv" firstAttribute="trailing" secondItem="Oiq-QI-eL1" secondAttribute="trailing" id="5Go-bz-CHc"/>
+                                    <constraint firstItem="iIM-XC-Rci" firstAttribute="top" secondItem="eaL-AW-dlA" secondAttribute="bottom" constant="10" id="FEn-nu-IPd"/>
+                                    <constraint firstItem="Oiq-QI-eL1" firstAttribute="leading" secondItem="3xw-Lm-mkc" secondAttribute="leading" id="Nco-SQ-FNu"/>
+                                    <constraint firstAttribute="trailing" secondItem="Oiq-QI-eL1" secondAttribute="trailing" id="RlE-Bk-nA0"/>
+                                    <constraint firstItem="NSu-o3-Vbv" firstAttribute="top" secondItem="Oiq-QI-eL1" secondAttribute="bottom" constant="8" id="UIp-4p-TMl"/>
+                                    <constraint firstItem="eaL-AW-dlA" firstAttribute="top" secondItem="NSu-o3-Vbv" secondAttribute="bottom" constant="12" id="WdI-0u-sVw"/>
+                                    <constraint firstItem="eaL-AW-dlA" firstAttribute="leading" secondItem="NSu-o3-Vbv" secondAttribute="leading" id="bcS-G0-0Jy"/>
+                                    <constraint firstItem="iIM-XC-Rci" firstAttribute="trailing" secondItem="eaL-AW-dlA" secondAttribute="trailing" id="jUh-eL-YGR"/>
+                                    <constraint firstItem="NSu-o3-Vbv" firstAttribute="leading" secondItem="Oiq-QI-eL1" secondAttribute="leading" id="lNd-SZ-2zX"/>
+                                    <constraint firstItem="Oiq-QI-eL1" firstAttribute="top" secondItem="3xw-Lm-mkc" secondAttribute="top" id="nYd-1L-GJr"/>
+                                    <constraint firstAttribute="height" constant="128" id="u2n-jL-mAk"/>
+                                    <constraint firstItem="iIM-XC-Rci" firstAttribute="leading" secondItem="eaL-AW-dlA" secondAttribute="leading" id="zNW-zh-pPd"/>
+                                    <constraint firstItem="eaL-AW-dlA" firstAttribute="trailing" secondItem="NSu-o3-Vbv" secondAttribute="trailing" id="zQJ-Or-Wv7"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3xw-Lm-mkc" firstAttribute="top" secondItem="aFx-G4-sHq" secondAttribute="bottom" constant="12" id="0Xe-iN-uYz"/>
+                            <constraint firstItem="3xw-Lm-mkc" firstAttribute="trailing" secondItem="aFx-G4-sHq" secondAttribute="trailing" id="2hf-UN-QH9"/>
+                            <constraint firstItem="aFx-G4-sHq" firstAttribute="trailing" secondItem="Uj5-qt-RB1" secondAttribute="trailing" id="2sE-1M-N1p"/>
+                            <constraint firstItem="Uj5-qt-RB1" firstAttribute="top" secondItem="Yb2-Ls-5Xx" secondAttribute="bottom" constant="8" id="5Op-uc-Sgi"/>
+                            <constraint firstItem="Yb2-Ls-5Xx" firstAttribute="top" secondItem="vCR-HB-lDH" secondAttribute="bottom" constant="8" id="8S3-6P-RKH"/>
+                            <constraint firstItem="Uj5-qt-RB1" firstAttribute="leading" secondItem="Yb2-Ls-5Xx" secondAttribute="leading" id="E5e-AM-f46"/>
+                            <constraint firstItem="aFx-G4-sHq" firstAttribute="leading" secondItem="Uj5-qt-RB1" secondAttribute="leading" id="Gcb-Lh-VGG"/>
+                            <constraint firstItem="Yb2-Ls-5Xx" firstAttribute="leading" secondItem="6mu-b4-gTB" secondAttribute="leadingMargin" constant="1" id="VcE-lq-8rq"/>
+                            <constraint firstItem="aFx-G4-sHq" firstAttribute="top" secondItem="Uj5-qt-RB1" secondAttribute="bottom" constant="30" id="Yu8-LI-pcJ"/>
+                            <constraint firstItem="3xw-Lm-mkc" firstAttribute="leading" secondItem="aFx-G4-sHq" secondAttribute="leading" id="bhb-GC-6dT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Yb2-Ls-5Xx" secondAttribute="trailing" id="iZR-iZ-3OF"/>
+                            <constraint firstItem="Uj5-qt-RB1" firstAttribute="trailing" secondItem="Yb2-Ls-5Xx" secondAttribute="trailing" id="uAq-Op-kBv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="actorContentView" destination="3xw-Lm-mkc" id="2cj-z0-6iA"/>
+                        <outlet property="actorName" destination="NSu-o3-Vbv" id="cZO-2d-Vxu"/>
+                        <outlet property="actorScreenName" destination="iIM-XC-Rci" id="Sgc-fi-2k8"/>
+                        <outlet property="directorNameValue" destination="Uj5-qt-RB1" id="rXd-Gt-nht"/>
+                        <outlet property="tapToShowMore" destination="aFx-G4-sHq" id="Crm-kj-UOc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ttj-1H-DzH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="OVl-48-f8Y">
+                    <connections>
+                        <action selector="showMoreOrLessTapped:" destination="3cv-Ec-Mja" id="Ger-fg-Nq9"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="301.60000000000002" y="88.605697151424295"/>
+        </scene>
     </scenes>
 </document>
