@@ -27,15 +27,6 @@
 	[self.view setupInitialState];
 }
 
-- (void)setViewForSetup:(UIView *)view {
-    [self.interactor setViewForSetup:view];
-}
-
-- (void)setData:(Film *)film {
-    films = [NSArray arrayWithObject:film];
-    [self.interactor setData:films];
-}
-
 #pragma mark - Методы MoviesListInteractorOutput
 
 @end

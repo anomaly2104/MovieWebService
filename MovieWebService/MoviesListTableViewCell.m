@@ -1,14 +1,14 @@
 //
-//  CellTableViewCell.m
+//  MoviesListTableViewCell.m
 //  MovieWebService
 //
 //  Created by testDev on 4/11/17.
 //  Copyright © 2017 TestCompany. All rights reserved.
 //
 
-#import "CellTableViewCell.h"
+#import "MoviesListTableViewCell.h"
 
-@implementation CellTableViewCell
+@implementation MoviesListTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];

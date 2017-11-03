@@ -1,5 +1,5 @@
 //
-//  CellTableViewCell.h
+//  MoviesListTableViewCell.h
 //  MovieWebService
 //
 //  Created by testDev on 4/11/17.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CellTableViewCell : UITableViewCell
+@interface MoviesListTableViewCell : UITableViewCell
 @property (strong, nonatomic) IBOutlet UILabel *name;
 @property (strong, nonatomic) IBOutlet UILabel *date;
 @property (strong, nonatomic) IBOutlet UILabel *filmRating;

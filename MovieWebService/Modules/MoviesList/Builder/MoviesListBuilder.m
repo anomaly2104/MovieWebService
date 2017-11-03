@@ -13,11 +13,13 @@
 #import "MoviesListPresenter.h"
 #import "MoviesListRouter.h"
 
+static NSString *MoviesListControllerIdentifier = @"MoviesListController";
+
 @implementation MoviesListBuilder
 
 - (UIViewController *)build {
     
-    MoviesListViewController *viewController = [MoviesListViewController new];
+    MoviesListViewController *viewController = [self moviesListViewController];
 
     MoviesListRouter *router = [MoviesListRouter new];
     router.viewController = viewController;
@@ -32,7 +34,22 @@
     viewController.output = presenter;
     
     return viewController;
+}
 
+- (MoviesListViewController *)moviesListViewController {
+    UIStoryboard *storyboard = [self mainStoryboard];
+    MoviesListViewController *moviesListViewController =
+    [storyboard instantiateViewControllerWithIdentifier:MoviesListControllerIdentifier];
+    
+    return moviesListViewController;
+}
+
+
+- (UIStoryboard *)mainStoryboard {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main"
+                                                         bundle:[NSBundle mainBundle]];
+    
+    return storyboard;
 }
 
 @end
