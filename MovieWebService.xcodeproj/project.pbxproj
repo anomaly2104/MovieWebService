@@ -44,6 +44,7 @@
 		D8BF340B1715D2CCC3DEB3B3 /* DetailsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BEC664098EA97453E0ECBD /* DetailsPresenterTests.swift */; };
 		DD1531A41FAE6C4A005483E1 /* DetailDisplayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1531A31FAE6C4A005483E1 /* DetailDisplayItem.swift */; };
 		DD1531A71FAE7F34005483E1 /* MoviesListModuleBuilderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD1531A61FAE7F34005483E1 /* MoviesListModuleBuilderTests.m */; };
+		DD1531AB1FAE8614005483E1 /* FilmTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD1531AA1FAE8614005483E1 /* FilmTests.m */; };
 		DD5020DF1FAD0EEE007E2811 /* DataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = DD5020DE1FAD0EEE007E2811 /* DataStore.m */; };
 		DD5020E41FADD608007E2811 /* RootBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = DD5020E31FADD608007E2811 /* RootBuilder.m */; };
 		DD5020E71FAE1FF4007E2811 /* Film_DisplayAdditions_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD5020E61FAE1FF4007E2811 /* Film_DisplayAdditions_Tests.m */; };
@@ -141,6 +142,7 @@
 		D3E495E73D8E0AC15D5596F4 /* MoviesListInteractorOutput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MoviesListInteractorOutput.h; sourceTree = "<group>"; };
 		DD1531A31FAE6C4A005483E1 /* DetailDisplayItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailDisplayItem.swift; sourceTree = "<group>"; };
 		DD1531A61FAE7F34005483E1 /* MoviesListModuleBuilderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviesListModuleBuilderTests.m; sourceTree = "<group>"; };
+		DD1531AA1FAE8614005483E1 /* FilmTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FilmTests.m; path = Model/FilmTests.m; sourceTree = "<group>"; };
 		DD5020DD1FAD0EEE007E2811 /* DataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataStore.h; sourceTree = "<group>"; };
 		DD5020DE1FAD0EEE007E2811 /* DataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataStore.m; sourceTree = "<group>"; };
 		DD5020E21FADD608007E2811 /* RootBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootBuilder.h; sourceTree = "<group>"; };
@@ -556,6 +558,7 @@
 		DD5020E51FAE1FD6007E2811 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DD1531AA1FAE8614005483E1 /* FilmTests.m */,
 				DD5020E61FAE1FF4007E2811 /* Film_DisplayAdditions_Tests.m */,
 			);
 			name = Model;
@@ -928,6 +931,7 @@
 			files = (
 				742C64031E9C750700B8E327 /* MovieWebServiceTests.m in Sources */,
 				2D83F1C19B23D02737F9607E /* MoviesListViewControllerTests.m in Sources */,
+				DD1531AB1FAE8614005483E1 /* FilmTests.m in Sources */,
 				B1ECDB0D319AC25FF7CDE7A3 /* MoviesListPresenterTests.m in Sources */,
 				1DA435E4F744A94268F376F0 /* MoviesListInteractorTests.m in Sources */,
 				EC2947B31729FA900482C447 /* MoviesListRouterTests.m in Sources */,
