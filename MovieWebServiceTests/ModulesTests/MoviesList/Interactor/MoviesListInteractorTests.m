@@ -68,12 +68,4 @@
     [self.mockOutput verify];
 }
 
-- (void)testItFoundMoviesGetsCalledOnCallingFindMovies {
-    [[self.mockOutput expect] foundMoviesList:OCMOCK_ANY];
-    
-    [self.interactor findMoviesList];
-    
-    [self.mockOutput verify];
-}
-
 @end
