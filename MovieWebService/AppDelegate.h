@@ -13,7 +13,5 @@
 
 @property (weak, nonatomic) UIWindow *window;
 
-- (void)getFilmWithCallback:(void (^)(Film *film))callback;
-
 @end
 
