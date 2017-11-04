@@ -12,10 +12,11 @@
 
 - (id)initWithData:(NSDictionary *)data forMovie:(Film *)movie {
     if (self) {
-        self.name = data[@"name"];
-        self.biography = data[@"biography"];
-        self.dateOfBirth = [NSDate dateWithTimeIntervalSince1970:[data[@"dateOfBirth"] doubleValue]];
-        self.nominated = [data[@"nominated"] boolValue];
+        _name = data[@"name"];
+        _biography = data[@"biography"];
+        _dateOfBirth = [NSDate dateWithTimeIntervalSince1970:[data[@"dateOfBirth"] doubleValue]];
+        _nominated = [data[@"nominated"] boolValue];
+        _movie = movie;
     }
     return self;
 }

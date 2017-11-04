@@ -13,7 +13,7 @@
 - (id)initWithData:(NSDictionary *)data forMovie:(Film *)movie {
     self = [super initWithData:data forMovie:movie];
     if (self) {
-        self.screenName = data[@"screenName"];
+        _screenName = data[@"screenName"];
     }
     return self;
 }
