@@ -10,7 +10,7 @@
 
 @implementation GenericRole
 
-- (id)initWithData:(NSDictionary *)data {
+- (id)initWithData:(NSDictionary *)data forMovie:(Film *)movie {
     if (self) {
         self.name = data[@"name"];
         self.biography = data[@"biography"];

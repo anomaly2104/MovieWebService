@@ -10,8 +10,8 @@
 
 @implementation Actor
 
-- (id)initWithData:(NSDictionary *)data {
-    self = [super initWithData:data];
+- (id)initWithData:(NSDictionary *)data forMovie:(Film *)movie {
+    self = [super initWithData:data forMovie:movie];
     if (self) {
         self.screenName = data[@"screenName"];
     }

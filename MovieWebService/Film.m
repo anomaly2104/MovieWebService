@@ -21,13 +21,11 @@
         self.releaseDate = [NSDate dateWithTimeIntervalSince1970:[data[@"releaseDate"] doubleValue]];
         self.name = data[@"name"];
         self.rating = [data[@"rating"] doubleValue];
-        self.director = [[Director alloc] initWithData:data[@"director"]];
-        self.director.film = self;
+        _director = [[Director alloc] initWithData:data[@"director"] forMovie:self];
         NSMutableArray *castsList = [@[] mutableCopy];
         NSArray *castsData = data[@"casts"];
         for (NSDictionary *castData in castsData) {
-            Actor *actor = [[Actor alloc] initWithData:castData];
-            actor.film = self;
+            Actor *actor = [[Actor alloc] initWithData:castData forMovie:self];
             [castsList addObject:actor];
         }
         self.cast = [castsList copy];
