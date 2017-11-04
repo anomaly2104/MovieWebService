@@ -44,7 +44,7 @@
 
 - (void)setNominated:(BOOL)nominate;
 {
-    nominated = nominate;
+    _nominated = nominate;
 }
 
 @end

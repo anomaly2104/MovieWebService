@@ -20,20 +20,18 @@ typedef enum {
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Film : NSObject {
-    BOOL *nominated;
-}
+@interface Film : NSObject
 
 @property (nonatomic) FilmRating filmRating;
-@property (weak, nonatomic) NSArray *languages;
-@property (weak, nonatomic) NSDate *releaseDate;
-@property (weak, nonatomic) NSArray<Actor*> *cast;
-
-- (id)initWithData:(NSDictionary *)data;
-
+@property (nonatomic) NSArray *languages;
+@property (nonatomic) NSDate *releaseDate;
+@property (nonatomic) NSArray<Actor*> *cast;
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic) double rating;
 @property (nonatomic, strong) Director *director;
+@property (nonatomic) BOOL nominated;
+
+- (id)initWithData:(NSDictionary *)data;
 
 @end
 
