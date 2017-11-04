@@ -13,7 +13,7 @@
 - (id)initWithData:(NSDictionary *)data {
     self = [super initWithData:data];
     if (self) {
-        self.screenName = [data objectForKey:@"screenName"];
+        self.screenName = data[@"screenName"];
     }
     return self;
 }

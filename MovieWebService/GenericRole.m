@@ -12,10 +12,10 @@
 
 - (id)initWithData:(NSDictionary *)data {
     if (self) {
-        self.name = [data objectForKey:@"name"];
-        self.biography = [data objectForKey:@"biography"];
-        self.dateOfBirth = [NSDate dateWithTimeIntervalSince1970:[[data objectForKey:@"dateOfBirth"] doubleValue]];
-        self.nominated = [[data objectForKey:@"nominated"] boolValue];
+        self.name = data[@"name"];
+        self.biography = data[@"biography"];
+        self.dateOfBirth = [NSDate dateWithTimeIntervalSince1970:[data[@"dateOfBirth"] doubleValue]];
+        self.nominated = [data[@"nominated"] boolValue];
     }
     return self;
 }

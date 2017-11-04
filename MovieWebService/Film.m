@@ -15,16 +15,16 @@
 - (id)initWithData:(NSDictionary *)data {
     self = [super init];
     if (self) {
-        self.filmRating = [[data objectForKey:@"filmRating"] doubleValue];
-        self.languages = [data objectForKey:@"languages"];
-        [self setNominated:[[data objectForKey:@"nominated"] boolValue]];
-        self.releaseDate = [NSDate dateWithTimeIntervalSince1970:[[data objectForKey:@"releaseDate"] doubleValue]];
-        self.name = [data objectForKey:@"name"];
-        self.rating = [[data objectForKey:@"rating"] doubleValue];
-        self.director = [[Director alloc] initWithData:[data objectForKey:@"director"]];
+        self.filmRating = [data[@"filmRating"] doubleValue];
+        self.languages = data[@"languages"];
+        self.nominated = [data[@"nominated"] boolValue];
+        self.releaseDate = [NSDate dateWithTimeIntervalSince1970:[data[@"releaseDate"] doubleValue]];
+        self.name = data[@"name"];
+        self.rating = [data[@"rating"] doubleValue];
+        self.director = [[Director alloc] initWithData:data[@"director"]];
         self.director.film = self;
         NSMutableArray *castsList = [@[] mutableCopy];
-        NSArray *castsData = [data objectForKey:@"casts"];
+        NSArray *castsData = data[@"casts"];
         for (NSDictionary *castData in castsData) {
             Actor *actor = [[Actor alloc] initWithData:castData];
             actor.film = self;
