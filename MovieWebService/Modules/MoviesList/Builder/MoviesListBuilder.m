@@ -13,6 +13,7 @@
 #import "MoviesListPresenter.h"
 #import "MoviesListRouter.h"
 #import "DataStore.h"
+#import "MovieWebService-Swift.h"
 
 static NSString *MoviesListControllerIdentifier = @"MoviesListController";
 
@@ -24,7 +25,8 @@ static NSString *MoviesListControllerIdentifier = @"MoviesListController";
 
     MoviesListRouter *router = [MoviesListRouter new];
     router.viewController = viewController;
-
+    router.detailBuilder = [DetailsModuleBuilder new];
+    
     MoviesListPresenter *presenter = [MoviesListPresenter new];
     presenter.view = viewController;
     presenter.router = router;

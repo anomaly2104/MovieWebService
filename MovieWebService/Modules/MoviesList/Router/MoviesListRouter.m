@@ -15,8 +15,7 @@
 #pragma mark - MoviesListRouterInput
 
 - (void)presentMovieDetailInterfaceForMovieWithName:(NSString *)movieName {
-    DetailsModuleBuilder *detailBuilder = [DetailsModuleBuilder new];
-    UIViewController *detailViewController = [detailBuilder buildWithMovieName:movieName];
+    UIViewController *detailViewController = [self.detailBuilder buildWithMovieName:movieName];
     [self.viewController showViewController:detailViewController sender:self.viewController];
 }
 

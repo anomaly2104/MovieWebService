@@ -8,10 +8,11 @@
 
 #import "MoviesListRouterInput.h"
 
-@class UIViewController;
+@class UIViewController, DetailsModuleBuilder;
 
 @interface MoviesListRouter : NSObject <MoviesListRouterInput>
 
 @property (nonatomic, weak) UIViewController *viewController;
+@property (nonatomic, strong) DetailsModuleBuilder *detailBuilder;
 
 @end
