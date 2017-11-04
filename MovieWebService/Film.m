@@ -30,7 +30,7 @@
             actor.film = self;
             [castsList addObject:actor];
         }
-        self.cast = castsList;
+        self.cast = [castsList copy];
     }
     return self;
 }
