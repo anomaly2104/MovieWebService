@@ -12,8 +12,8 @@
 
 @interface GenericRole : NSObject
 
-@property (nonatomic, strong) NSString *name;
-@property (nonatomic, strong) NSString *biography;
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSString *biography;
 @property (nonatomic, strong) NSDate *dateOfBirth;
 @property (nonatomic) BOOL nominated;
 

@@ -26,7 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) NSArray *languages;
 @property (nonatomic) NSDate *releaseDate;
 @property (nonatomic) NSArray<Actor*> *cast;
-@property (nonatomic, strong) NSString *name;
+@property (nonatomic, copy) NSString *name;
 @property (nonatomic) double rating;
 @property (nonatomic, strong) Director *director;
 @property (nonatomic) BOOL nominated;
