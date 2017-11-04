@@ -9,9 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface MoviesListTableViewCell : UITableViewCell
-@property (strong, nonatomic) IBOutlet UILabel *name;
-@property (strong, nonatomic) IBOutlet UILabel *date;
-@property (strong, nonatomic) IBOutlet UILabel *filmRating;
-@property (strong, nonatomic) IBOutlet UILabel *rating;
+
+- (void)setNameText:(NSString *)nameText;
+- (void)setReleaseDateText:(NSString *)releaseDateText;
+- (void)setFilmRatingText:(NSString *)filmRatingText;
+- (void)setRatingText:(NSString *)ratingText;
 
 @end

@@ -14,6 +14,7 @@
 #import "MoviesListDisplayItem.h"
 
 static NSString * const MoviesListCellIdentifier = @"MoviesListCell";
+#define NavigationTitle NSLocalizedString(@"Root View Controller", @"Navigation title for root view controller")
 
 @interface MoviesListViewController ()
 
@@ -36,8 +37,7 @@ static NSString * const MoviesListCellIdentifier = @"MoviesListCell";
 }
 
 - (void)configureView {
-    self.navigationItem.title = @"RootViewController";
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.navigationItem.title = NavigationTitle;
 }
 
 #pragma mark - Setters
@@ -69,10 +69,10 @@ static NSString * const MoviesListCellIdentifier = @"MoviesListCell";
                                     forIndexPath:indexPath];
     
     MoviesListDisplayItem *displayItem = self.moviesList[indexPath.row];
-    cell.name.text = displayItem.name;
-    cell.date.text = displayItem.releaseDate;
-    cell.filmRating.text = displayItem.filmRating;
-    cell.rating.text = displayItem.rating;
+    [cell setNameText:displayItem.name];
+    [cell setReleaseDateText:displayItem.releaseDate];
+    [cell setFilmRatingText:displayItem.filmRating];
+    [cell setRatingText:displayItem.rating];
     
     return cell;
 }
