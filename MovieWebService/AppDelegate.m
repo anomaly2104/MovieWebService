@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 #import "MoviesListBuilder.h"
-#import "Film.h"
 #import "RootBuilder.h"
 
 @interface AppDelegate ()
