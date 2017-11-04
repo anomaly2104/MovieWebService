@@ -9,7 +9,7 @@
 import UIKit
 
 class DetailDisplayItem: NSObject {
-    var directorName: String = NSLocalizedString("Not found", comment: "Default string for director name")
-    var actorName: String = NSLocalizedString("Not found", comment: "Default string for actor name")
-    var actorScreenName: String = NSLocalizedString("Not found", comment: "Default string for actor screen name")
+    var directorName: String?
+    var actorName: String?
+    var actorScreenName: String?
 }

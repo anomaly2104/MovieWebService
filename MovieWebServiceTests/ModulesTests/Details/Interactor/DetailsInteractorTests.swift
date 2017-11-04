@@ -15,27 +15,62 @@ class DetailsInteractorTests: XCTestCase {
 
     var interactor: DetailsInteractor!
     var output: MockOutput!
+    var dataStore: MockDataStore!
+    let testMovieName = "TestMovie"
 	
     override func setUp() {
         super.setUp()
 		
         output = MockOutput()
-       
-        interactor = DetailsInteractor()
+        dataStore = MockDataStore()
+        
+        interactor = DetailsInteractor(withMovieName: testMovieName, dataStore: DataStore())
         interactor.output = output
+        interactor.dataStore = dataStore
     }
 
     override func tearDown() {
         output = nil
         interactor = nil
-	
+        
         super.tearDown()
+    }
+    
+    func testFoundMovieFromDataStoreWillBeGivenInCallbackMethod() {
+        interactor.findMovie()
+        XCTAssertTrue(output.isFoundMovieCalled)
+        XCTAssertEqual(dataStore.testMovie, output.foundMovieCalledParam)
+    }
+    
+    func testFindMovieCallsDataStoreWithCorrectMovieName() {
+        interactor.findMovie()
+        XCTAssertTrue(dataStore.isGetMovieCalled)
+        XCTAssertEqual(testMovieName, dataStore.getMovieCalledParam)
     }
 
     // MARK: - Mock
+    
+    class MockDataStore: DataStore {
+        let testMovie = Film()
+        var isGetMovieCalled: Bool = false
+        var getMovieCalledParam: String? = nil
+        
+        override func getMovieWithName(_ movieName: String!, callback: ((Film?) -> Void)!) {
+            isGetMovieCalled = true
+            getMovieCalledParam = movieName
+
+            callback(testMovie)
+        }
+    }
 
     class MockOutput: DetailsInteractorOutput {
-
+        var isFoundMovieCalled: Bool = false
+        var foundMovieCalledParam: Film? = nil
+        
+        func foundMovie(movie: Film?) {
+            isFoundMovieCalled = true
+            foundMovieCalledParam = movie
+        }
     }
 
 }

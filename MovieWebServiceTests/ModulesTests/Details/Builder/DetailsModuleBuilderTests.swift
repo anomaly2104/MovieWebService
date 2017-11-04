@@ -12,6 +12,7 @@ import XCTest
 import MovieWebService
 
 class DetailsModuleBuilderTests: XCTestCase {
+    let testMovieName = "MovieName"
 
     func testBuildViewController() {
 
@@ -19,7 +20,7 @@ class DetailsModuleBuilderTests: XCTestCase {
         let builder = DetailsModuleBuilder()
 
         // when
-        let viewController = builder.build(with: Film()) as! DetailsViewController
+        let viewController = builder.build(withMovieName: testMovieName) as! DetailsViewController
 
         // then
         XCTAssertNotNil(viewController.output)
@@ -32,6 +33,7 @@ class DetailsModuleBuilderTests: XCTestCase {
 
         let interactor: DetailsInteractor = presenter.interactor as! DetailsInteractor
         XCTAssertNotNil(interactor.output)
+        XCTAssertEqual(testMovieName, interactor.movieName)
 
         let router: DetailsRouter = presenter.router as! DetailsRouter
         XCTAssertNotNil(router.viewController)

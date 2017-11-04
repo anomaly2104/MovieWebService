@@ -37,9 +37,9 @@ class DetailsPresenter: DetailsModuleInput, DetailsViewOutput, DetailsInteractor
         view.showDetailsForDetailDisplayItem(detailDisplayItem: detailDisplayItem)
     }
     
-    // MARK: -
+    // MARK: - Private Methods
     
-    func createDetailDisplayItemFromMovie(movieOptional: Film?) -> DetailDisplayItem {
+    private func createDetailDisplayItemFromMovie(movieOptional: Film?) -> DetailDisplayItem {
         let detailDisplayItem = DetailDisplayItem()
         
         if let movie = movieOptional {
@@ -53,7 +53,7 @@ class DetailsPresenter: DetailsModuleInput, DetailsViewOutput, DetailsInteractor
         return detailDisplayItem
     }
     
-    func updateActorView() {
+    private func updateActorView() {
         if showActorContent {
             view.showActorContent()
         } else {
@@ -61,7 +61,7 @@ class DetailsPresenter: DetailsModuleInput, DetailsViewOutput, DetailsInteractor
         }
     }
     
-    func updateShowMoreOrLessLabel() {
+    private func updateShowMoreOrLessLabel() {
         if showActorContent {
             view.displayShowLessText()
         } else {
