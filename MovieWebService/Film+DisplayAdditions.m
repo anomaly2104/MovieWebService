@@ -12,7 +12,7 @@
 @implementation Film (DisplayAdditions)
 
 - (NSString *)releaseDateDisplayText {
-    return [self.releaseDate formattedDateWithStyle:NSDateFormatterLongStyle];
+    return [self.releaseDate formattedDateWithStyle:NSDateFormatterMediumStyle];
 }
 
 - (NSString *)filmRatingDisplayText {
