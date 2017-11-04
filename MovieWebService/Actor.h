@@ -13,6 +13,4 @@
 
 @property (nonatomic, copy) NSString *screenName;
 
-- (id)initWithData:(NSDictionary *)data;
-
 @end
