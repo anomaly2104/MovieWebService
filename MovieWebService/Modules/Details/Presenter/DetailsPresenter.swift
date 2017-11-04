@@ -21,6 +21,21 @@ class DetailsPresenter: DetailsModuleInput, DetailsViewOutput, DetailsInteractor
     // MARK: - DetailsInteractorOutput
     
     func foundMovie(movie: Film?) {
-        view.showDetailsForMovie(movie: movie)
+        let detailDisplayItem = createDetailDisplayItemFromMovie(movieOptional: movie)
+        view.showDetailsForDetailDisplayItem(detailDisplayItem: detailDisplayItem)
+    }
+    
+    func createDetailDisplayItemFromMovie(movieOptional: Film?) -> DetailDisplayItem {
+        let detailDisplayItem = DetailDisplayItem()
+        
+        if let movie = movieOptional {
+            detailDisplayItem.directorName = movie.director.name
+            if let actor = movie.cast.first {
+                detailDisplayItem.actorName = actor.name
+                detailDisplayItem.actorScreenName = actor.screenName
+            }
+        }
+        
+        return detailDisplayItem
     }
 }

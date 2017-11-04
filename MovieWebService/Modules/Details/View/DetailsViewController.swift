@@ -33,16 +33,12 @@ class DetailsViewController: UIViewController, DetailsViewInput {
 
     // MARK: DetailsViewInput
     
-    func showDetailsForMovie(movie movieOp: Film?) {
-        if let movie = movieOp {
-            DispatchQueue.main.async { [weak self] in
-                if let sself = self {
-                    sself.directorNameValue.text = movie.director.name
-                    if let actor = movie.cast.first {
-                        sself.actorName.text = actor.name
-                        sself.actorScreenName.text = actor.screenName
-                    }
-                }
+    func showDetailsForDetailDisplayItem(detailDisplayItem: DetailDisplayItem) {
+        DispatchQueue.main.async { [weak self] in
+            if let sself = self {
+                sself.directorNameValue.text = detailDisplayItem.directorName
+                sself.actorName.text = detailDisplayItem.actorName
+                sself.actorScreenName.text = detailDisplayItem.actorScreenName
             }
         }
     }

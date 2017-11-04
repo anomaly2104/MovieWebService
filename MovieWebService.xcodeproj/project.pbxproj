@@ -42,6 +42,7 @@
 		BC4A6E017108906463B7D6EF /* MoviesListInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = F04B81BB8E069391AC58935D /* MoviesListInteractor.m */; };
 		C7DB85D5B1453F3151459F19 /* DetailsViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D852298DA083746EF65D02 /* DetailsViewOutput.swift */; };
 		D8BF340B1715D2CCC3DEB3B3 /* DetailsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BEC664098EA97453E0ECBD /* DetailsPresenterTests.swift */; };
+		DD1531A41FAE6C4A005483E1 /* DetailDisplayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1531A31FAE6C4A005483E1 /* DetailDisplayItem.swift */; };
 		DD5020DF1FAD0EEE007E2811 /* DataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = DD5020DE1FAD0EEE007E2811 /* DataStore.m */; };
 		DD5020E41FADD608007E2811 /* RootBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = DD5020E31FADD608007E2811 /* RootBuilder.m */; };
 		DD5020E71FAE1FF4007E2811 /* Film_DisplayAdditions_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD5020E61FAE1FF4007E2811 /* Film_DisplayAdditions_Tests.m */; };
@@ -137,6 +138,7 @@
 		D0694EA765A10A05BD4473FE /* DetailsInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DetailsInteractorInput.swift; sourceTree = "<group>"; };
 		D39CE7C8FB3C38D6D501CE54 /* DetailsViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		D3E495E73D8E0AC15D5596F4 /* MoviesListInteractorOutput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MoviesListInteractorOutput.h; sourceTree = "<group>"; };
+		DD1531A31FAE6C4A005483E1 /* DetailDisplayItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailDisplayItem.swift; sourceTree = "<group>"; };
 		DD5020DD1FAD0EEE007E2811 /* DataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataStore.h; sourceTree = "<group>"; };
 		DD5020DE1FAD0EEE007E2811 /* DataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataStore.m; sourceTree = "<group>"; };
 		DD5020E21FADD608007E2811 /* RootBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootBuilder.h; sourceTree = "<group>"; };
@@ -465,6 +467,7 @@
 			children = (
 				148E8494DB90097392C92E80 /* DetailsModuleInput.swift */,
 				EFB0BE1422967EB71C2F2F0F /* DetailsPresenter.swift */,
+				DD1531A31FAE6C4A005483E1 /* DetailDisplayItem.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -895,6 +898,7 @@
 				C7DB85D5B1453F3151459F19 /* DetailsViewOutput.swift in Sources */,
 				DD5020DF1FAD0EEE007E2811 /* DataStore.m in Sources */,
 				ECF6ADAC4D6A9543F0896D1F /* DetailsViewController.swift in Sources */,
+				DD1531A41FAE6C4A005483E1 /* DetailDisplayItem.swift in Sources */,
 				9E91D35C4F9A99DA2DA1B5BD /* DetailsModuleInput.swift in Sources */,
 				3A1E161A2EB88942BBCBC76E /* DetailsPresenter.swift in Sources */,
 				DD5020E41FADD608007E2811 /* RootBuilder.m in Sources */,
@@ -1089,7 +1093,7 @@
 			baseConfigurationReference = A04472FFCF6FDE683F18F480 /* Pods-MovieWebServiceTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				HEADER_SEARCH_PATHS = "$CONFIGURATION_TEMP_DIR/MovieWebService.build/DerivedSources";
+				HEADER_SEARCH_PATHS = $CONFIGURATION_TEMP_DIR/MovieWebService.build/DerivedSources;
 				INFOPLIST_FILE = MovieWebServiceTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = agodatest.MovieWebServiceTests;
