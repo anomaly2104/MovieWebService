@@ -10,6 +10,4 @@
 
 @protocol MoviesListModuleInput
 
-- (void)configureModule;
-
 @end

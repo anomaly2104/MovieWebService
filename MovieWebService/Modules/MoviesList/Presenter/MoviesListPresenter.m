@@ -18,11 +18,6 @@
 
 @implementation MoviesListPresenter
 
-#pragma mark - Методы MoviesListModuleInput
-
-- (void)configureModule {
- }
-
 #pragma mark - Методы MoviesListViewOutput
 
 - (void)updateView {
