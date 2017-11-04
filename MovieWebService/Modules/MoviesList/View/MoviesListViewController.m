@@ -33,6 +33,7 @@ static NSString * const MoviesListCellIdentifier = @"MoviesListCell";
 }
 
 - (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     [self.output updateView];
 }
 
