@@ -35,16 +35,4 @@
     return self;
 }
 
-
-- (void)setName:(NSString *)name {
-    if (name != _name) {
-        _name = name;
-    }
-}
-
-- (void)setNominated:(BOOL)nominate;
-{
-    _nominated = nominate;
-}
-
 @end
