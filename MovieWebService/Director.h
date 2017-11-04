@@ -11,6 +11,4 @@
 
 @interface Director : GenericRole
 
-- (id)initWithData:(NSDictionary *)data;
-
 @end
