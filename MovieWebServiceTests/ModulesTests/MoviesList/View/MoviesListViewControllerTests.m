@@ -41,18 +41,12 @@
     [super tearDown];
 }
 
-- (void)testThatControllerNotifiesPresenterOnDidLoad {
-	// given
-
-	// when
-	[self.controller viewDidLoad];
-
-	// then
-	OCMVerify([self.mockOutput didTriggerViewReadyEvent]);
+- (void)testItAsksPresenterToUpdateViewOnWillAppear {
+    [[self.mockOutput expect] updateView];
+    
+	[self.controller viewWillAppear:YES];
+    
+    [self.mockOutput verify];
 }
-
-#pragma mark - Тестирование методов интерфейса
-
-#pragma mark - Тестирование методов MoviesListViewInput
 
 @end

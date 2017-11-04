@@ -14,6 +14,9 @@
 #import "MoviesListViewInput.h"
 #import "MoviesListInteractorInput.h"
 #import "MoviesListRouterInput.h"
+#import "MoviesListDisplayItem.h"
+#import "Film.h"
+#import <DateTools/DateTools.h>
 
 @interface MoviesListPresenterTests : XCTestCase
 
@@ -52,16 +55,59 @@
     [super tearDown];
 }
 
+- (void)testItAsksInterceptorToFindMoviesListForUpdateViewEventFromView {
+    [[self.mockInteractor expect] findMoviesList];
+    
+    [self.presenter updateView];
+    
+    [self.mockInteractor verify];
+}
 
-- (void)testThatPresenterHandlesViewReadyEvent {
-    // given
+- (void)testItAsksRouterToPresentDetailViewForSelectedMovie {
+    NSString *testMovieName = @"TestMovie";
+    MoviesListDisplayItem *testItem = [MoviesListDisplayItem new];
+    testItem.name = testMovieName;
+    [[self.mockRouter expect] presentMovieDetailInterfaceForMovieWithName:testMovieName];
+    
+    [self.presenter selectedMovie:testItem];
+    
+    [self.mockRouter verify];
+}
 
+- (void)testViewIsCalledWithCorrectMovieListDisplayItems {
+    [[self.mockView expect] showMoviesList:[OCMArg checkWithBlock:^BOOL(NSArray *movieDisplayList) {
+        XCTAssertEqual(movieDisplayList.count, 1);
+        XCTAssertTrue([movieDisplayList.firstObject isKindOfClass:[MoviesListDisplayItem class]]);
+        
+        MoviesListDisplayItem *displayItem = movieDisplayList.firstObject;
+        
+        XCTAssertEqualObjects(displayItem.name, @"TestMovie");
+        XCTAssertEqualObjects(displayItem.releaseDate, @"Oct 12, 2012");
+        XCTAssertEqualObjects(displayItem.filmRating, @"R");
+        XCTAssertEqualObjects(displayItem.rating, @"7.8");
+        return YES;
+    }]];
+    
+    
+    NSArray *testMovieList = @[[self filmWithName:@"TestMovie"
+                                      releaseDate:[NSDate dateWithYear:2012
+                                                                 month:10
+                                                                   day:12]
+                                       filmRating:@3
+                                           rating:@7.8]];
+    [self.presenter foundMoviesList:testMovieList];
+    
+    [self.mockRouter verify];
+}
 
-    // when
-    [self.presenter didTriggerViewReadyEvent];
-
-    // then
-    OCMVerify([self.mockView setupInitialState]);
+- (Film *)filmWithName:(NSString *)name
+           releaseDate:(NSDate *)releaseDate
+            filmRating:(NSNumber *)filmRating
+                rating:(NSNumber *)rating {
+    return [[Film alloc] initWithData:@{ @"name": name,
+                                         @"filmRating": filmRating,
+                                         @"releaseDate": @([releaseDate timeIntervalSince1970]),
+                                         @"rating": rating }];
 }
 
 @end

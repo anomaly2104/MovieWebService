@@ -12,7 +12,10 @@ target ‘MovieWebService’ do
 
   target ‘MovieWebServiceTests' do
     inherit! :search_paths
+
     # Pods for testing
+    pod 'OCMock', :inhibit_warnings => true
+    
   end
 
   target ‘MovieWebServiceUITests' do

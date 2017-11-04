@@ -44,6 +44,7 @@
 		D8BF340B1715D2CCC3DEB3B3 /* DetailsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BEC664098EA97453E0ECBD /* DetailsPresenterTests.swift */; };
 		DD5020DF1FAD0EEE007E2811 /* DataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = DD5020DE1FAD0EEE007E2811 /* DataStore.m */; };
 		DD5020E41FADD608007E2811 /* RootBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = DD5020E31FADD608007E2811 /* RootBuilder.m */; };
+		DD5020E71FAE1FF4007E2811 /* Film_DisplayAdditions_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD5020E61FAE1FF4007E2811 /* Film_DisplayAdditions_Tests.m */; };
 		DD6D955C1FACFB3F00305B20 /* MoviesListDisplayItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6D955B1FACFB3F00305B20 /* MoviesListDisplayItem.m */; };
 		DD6D95601FAD029C00305B20 /* Film+DisplayAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6D955F1FAD029C00305B20 /* Film+DisplayAdditions.m */; };
 		E2172FD11664F9A934E6AFB4 /* DetailsModuleBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF463CEF7112C249D34D15F /* DetailsModuleBuilderTests.swift */; };
@@ -140,6 +141,7 @@
 		DD5020DE1FAD0EEE007E2811 /* DataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataStore.m; sourceTree = "<group>"; };
 		DD5020E21FADD608007E2811 /* RootBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootBuilder.h; sourceTree = "<group>"; };
 		DD5020E31FADD608007E2811 /* RootBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootBuilder.m; sourceTree = "<group>"; };
+		DD5020E61FAE1FF4007E2811 /* Film_DisplayAdditions_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Film_DisplayAdditions_Tests.m; path = Model/Film_DisplayAdditions_Tests.m; sourceTree = "<group>"; };
 		DD6D955A1FACFB3F00305B20 /* MoviesListDisplayItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviesListDisplayItem.h; sourceTree = "<group>"; };
 		DD6D955B1FACFB3F00305B20 /* MoviesListDisplayItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviesListDisplayItem.m; sourceTree = "<group>"; };
 		DD6D955E1FAD029C00305B20 /* Film+DisplayAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Film+DisplayAdditions.h"; sourceTree = "<group>"; };
@@ -357,6 +359,7 @@
 		742C64011E9C750700B8E327 /* MovieWebServiceTests */ = {
 			isa = PBXGroup;
 			children = (
+				DD5020E51FAE1FD6007E2811 /* Model */,
 				742C64021E9C750700B8E327 /* MovieWebServiceTests.m */,
 				742C64041E9C750700B8E327 /* Info.plist */,
 				3AD4387689456E863A555DEF /* ModulesTests */,
@@ -534,6 +537,14 @@
 				DD5020E31FADD608007E2811 /* RootBuilder.m */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		DD5020E51FAE1FD6007E2811 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DD5020E61FAE1FF4007E2811 /* Film_DisplayAdditions_Tests.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		DFED55E88469F67815074C84 /* View */ = {
@@ -795,9 +806,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MovieWebServiceTests/Pods-MovieWebServiceTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/OCMock/OCMock.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OCMock.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -903,6 +917,7 @@
 				1DA435E4F744A94268F376F0 /* MoviesListInteractorTests.m in Sources */,
 				EC2947B31729FA900482C447 /* MoviesListRouterTests.m in Sources */,
 				E2172FD11664F9A934E6AFB4 /* DetailsModuleBuilderTests.swift in Sources */,
+				DD5020E71FAE1FF4007E2811 /* Film_DisplayAdditions_Tests.m in Sources */,
 				724C4C1CE4007A2FE908E02B /* DetailsViewTests.swift in Sources */,
 				9DD4F619A27419084F677EB0 /* DetailsInteractorTests.swift in Sources */,
 				D8BF340B1715D2CCC3DEB3B3 /* DetailsPresenterTests.swift in Sources */,
@@ -1074,6 +1089,7 @@
 			baseConfigurationReference = A04472FFCF6FDE683F18F480 /* Pods-MovieWebServiceTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				HEADER_SEARCH_PATHS = "$CONFIGURATION_TEMP_DIR/MovieWebService.build/DerivedSources";
 				INFOPLIST_FILE = MovieWebServiceTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = agodatest.MovieWebServiceTests;
