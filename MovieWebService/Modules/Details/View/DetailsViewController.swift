@@ -9,7 +9,10 @@
 import UIKit
 
 class DetailsViewController: UIViewController, DetailsViewInput {
-
+    let showMoreText = NSLocalizedString("Tap here to show more", comment: "Tap here to show more")
+    let showLessText = NSLocalizedString("Tap here to show less", comment: "Tap here to show more")
+    
+    
     var output: DetailsViewOutput!
 
     @IBOutlet weak var directorNameValue: UILabel!
@@ -22,8 +25,7 @@ class DetailsViewController: UIViewController, DetailsViewInput {
     
     override func viewDidLoad() {
         super .viewDidLoad()
-        actorContentView.isHidden = true
-        updateTapShowMoreOrLessLabelText()
+        output.didFinishLoading()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -42,20 +44,26 @@ class DetailsViewController: UIViewController, DetailsViewInput {
             }
         }
     }
+    
+    func displayShowMoreText() {
+        tapToShowMore.text = showMoreText
+    }
+    
+    func displayShowLessText() {
+        tapToShowMore.text = showLessText
+    }
+    
+    func hideActorContent() {
+        actorContentView.isHidden = true
+    }
+    
+    func showActorContent() {
+        actorContentView.isHidden = false
+    }
 
     // MARK: TappableLabelDelegate
     
     @IBAction func showMoreOrLessTapped(_ sender: Any) {
-        actorContentView.isHidden = !actorContentView.isHidden
-        updateTapShowMoreOrLessLabelText()
+        output.didTapShowMoreOrLessLabel()
     }
-    
-    func updateTapShowMoreOrLessLabelText() {
-        if actorContentView.isHidden {
-            tapToShowMore.text = NSLocalizedString("Tap here to show more", comment: "Tap here to show more")
-        } else {
-            tapToShowMore.text = NSLocalizedString("Tap here to show less", comment: "Tap here to show less")
-        }
-    }
-
 }

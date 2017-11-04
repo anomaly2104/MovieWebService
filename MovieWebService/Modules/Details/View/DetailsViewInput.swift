@@ -7,5 +7,9 @@
 //
 
 protocol DetailsViewInput: class {
-    func showDetailsForMovie(movie: Film?)
+    func showDetailsForDetailDisplayItem(detailDisplayItem: DetailDisplayItem)
+    func displayShowMoreText()
+    func displayShowLessText()
+    func showActorContent()
+    func hideActorContent()
 }

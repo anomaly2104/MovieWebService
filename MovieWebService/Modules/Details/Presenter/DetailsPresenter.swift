@@ -7,10 +7,10 @@
 //
 
 class DetailsPresenter: DetailsModuleInput, DetailsViewOutput, DetailsInteractorOutput {
-
     weak var view: DetailsViewInput!
     var interactor: DetailsInteractorInput!
     var router: DetailsRouterInput!
+    var showActorContent: Bool = false
 
     // MARK: - DetailsViewOutput
     
@@ -18,12 +18,26 @@ class DetailsPresenter: DetailsModuleInput, DetailsViewOutput, DetailsInteractor
         interactor.findMovie()
     }
     
+    func didFinishLoading() {
+        showActorContent = false
+        updateActorView()
+        updateShowMoreOrLessLabel()
+    }
+    
+    func didTapShowMoreOrLessLabel() {
+        showActorContent = !showActorContent
+        updateActorView()
+        updateShowMoreOrLessLabel()
+    }
+
     // MARK: - DetailsInteractorOutput
     
     func foundMovie(movie: Film?) {
         let detailDisplayItem = createDetailDisplayItemFromMovie(movieOptional: movie)
         view.showDetailsForDetailDisplayItem(detailDisplayItem: detailDisplayItem)
     }
+    
+    // MARK: -
     
     func createDetailDisplayItemFromMovie(movieOptional: Film?) -> DetailDisplayItem {
         let detailDisplayItem = DetailDisplayItem()
@@ -37,5 +51,21 @@ class DetailsPresenter: DetailsModuleInput, DetailsViewOutput, DetailsInteractor
         }
         
         return detailDisplayItem
+    }
+    
+    func updateActorView() {
+        if showActorContent {
+            view.showActorContent()
+        } else {
+            view.hideActorContent()
+        }
+    }
+    
+    func updateShowMoreOrLessLabel() {
+        if showActorContent {
+            view.displayShowLessText()
+        } else {
+            view.displayShowMoreText()
+        }
     }
 }

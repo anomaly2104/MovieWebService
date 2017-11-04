@@ -9,5 +9,7 @@
 protocol DetailsViewOutput {
 
     func updateView()
+    func didFinishLoading()
+    func didTapShowMoreOrLessLabel()
 
 }
