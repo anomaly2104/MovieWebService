@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "MoviesListBuilder.h"
 #import "Film.h"
+#import "RootBuilder.h"
 
 @interface AppDelegate ()
 
@@ -20,9 +21,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     MoviesListBuilder *firstBuilder = [MoviesListBuilder new];
     UIViewController *viewController = [firstBuilder build];
-    self.navigationController = [UINavigationController new];
-    self.navigationController.viewControllers =[NSArray arrayWithObject: viewController];
-    self.window.rootViewController = self.navigationController;
+    RootBuilder *rootBuilder = [RootBuilder new];
+    [rootBuilder showRootViewController:viewController inWindow:self.window];
     [self.window makeKeyAndVisible];
 
     return YES;
