@@ -45,7 +45,7 @@
     [super tearDown];
 }
 
-- (void)testItCallDataStoreToFetchMoviesList {
+- (void)testItCallsDataStoreToFetchMoviesList {
     [[self.mockDataStore expect] getMoviesWithCallback:OCMOCK_ANY];
     
     [self.interactor findMoviesList];
