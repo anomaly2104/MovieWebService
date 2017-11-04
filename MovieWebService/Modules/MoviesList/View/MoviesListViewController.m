@@ -82,7 +82,7 @@ static NSString * const MoviesListCellIdentifier = @"MoviesListCell";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     MoviesListDisplayItem *displayItem = self.moviesList[indexPath.row];
-    [self.output selecteMovie:displayItem];
+    [self.output selectedMovie:displayItem];
 }
 
 @end

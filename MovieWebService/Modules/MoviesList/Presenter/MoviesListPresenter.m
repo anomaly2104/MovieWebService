@@ -24,7 +24,7 @@
     [self.interactor findMoviesList];
 }
 
-- (void)selecteMovie:(MoviesListDisplayItem *)movieListDisplayItem {
+- (void)selectedMovie:(MoviesListDisplayItem *)movieListDisplayItem {
     [self.router presentMovieDetailInterfaceForMovieWithName:movieListDisplayItem.name];
 }
 

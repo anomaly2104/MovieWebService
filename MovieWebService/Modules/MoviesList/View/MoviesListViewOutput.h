@@ -13,6 +13,6 @@
 @protocol MoviesListViewOutput <NSObject>
 
 - (void)updateView;
-- (void)selecteMovie:(MoviesListDisplayItem *)movieListDisplayItem;
+- (void)selectedMovie:(MoviesListDisplayItem *)movieListDisplayItem;
 
 @end
