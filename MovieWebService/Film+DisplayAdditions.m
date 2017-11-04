@@ -9,6 +9,8 @@
 #import "Film+DisplayAdditions.h"
 #import <DateTools/DateTools.h>
 
+#define InvalidRating NSLocalizedString(@"Invalid Rating", @"Text for invalid value of film rating.");
+
 @implementation Film (DisplayAdditions)
 
 - (NSString *)releaseDateDisplayText {
@@ -28,7 +30,7 @@
         default:
             break;
     }
-    return nil;
+    return InvalidRating;
 }
 
 - (NSString *)ratingDisplayText {
