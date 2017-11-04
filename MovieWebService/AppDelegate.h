@@ -11,7 +11,7 @@
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
-@property (weak, nonatomic) UIWindow *window;
+@property (strong, nonatomic) UIWindow *window;
 
 @end
 
