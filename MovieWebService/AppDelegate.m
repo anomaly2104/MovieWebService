@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "MoviesListBuilder.h"
+#import "MoviesListModuleBuilder.h"
 #import "RootBuilder.h"
 
 @interface AppDelegate ()
@@ -18,7 +18,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    MoviesListBuilder *firstBuilder = [MoviesListBuilder new];
+    MoviesListModuleBuilder *firstBuilder = [MoviesListModuleBuilder new];
     UIViewController *viewController = [firstBuilder build];
     RootBuilder *rootBuilder = [RootBuilder new];
     [rootBuilder showRootViewController:viewController inWindow:self.window];

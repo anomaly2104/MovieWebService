@@ -27,7 +27,7 @@
 		742C63F81E9C750600B8E327 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 742C63F61E9C750600B8E327 /* LaunchScreen.storyboard */; };
 		742C64031E9C750700B8E327 /* MovieWebServiceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 742C64021E9C750700B8E327 /* MovieWebServiceTests.m */; };
 		742C640E1E9C750700B8E327 /* MovieWebServiceUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 742C640D1E9C750700B8E327 /* MovieWebServiceUITests.m */; };
-		742C64261E9C7A3900B8E327 /* MoviesListBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 742C64251E9C7A3900B8E327 /* MoviesListBuilder.m */; };
+		742C64261E9C7A3900B8E327 /* MoviesListModuleBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 742C64251E9C7A3900B8E327 /* MoviesListModuleBuilder.m */; };
 		742C642D1E9C89E000B8E327 /* MoviesListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 742C642B1E9C89E000B8E327 /* MoviesListTableViewCell.m */; };
 		742C64321E9C901A00B8E327 /* Film.m in Sources */ = {isa = PBXBuildFile; fileRef = 742C64311E9C901A00B8E327 /* Film.m */; };
 		742C64351E9C90F100B8E327 /* Actor.m in Sources */ = {isa = PBXBuildFile; fileRef = 742C64341E9C90F100B8E327 /* Actor.m */; };
@@ -112,8 +112,8 @@
 		742C64091E9C750700B8E327 /* MovieWebServiceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieWebServiceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		742C640D1E9C750700B8E327 /* MovieWebServiceUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieWebServiceUITests.m; sourceTree = "<group>"; };
 		742C640F1E9C750700B8E327 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		742C64241E9C7A3900B8E327 /* MoviesListBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviesListBuilder.h; sourceTree = "<group>"; };
-		742C64251E9C7A3900B8E327 /* MoviesListBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviesListBuilder.m; sourceTree = "<group>"; };
+		742C64241E9C7A3900B8E327 /* MoviesListModuleBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviesListModuleBuilder.h; sourceTree = "<group>"; };
+		742C64251E9C7A3900B8E327 /* MoviesListModuleBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviesListModuleBuilder.m; sourceTree = "<group>"; };
 		742C642A1E9C89E000B8E327 /* MoviesListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MoviesListTableViewCell.h; path = ../../../MoviesListTableViewCell.h; sourceTree = "<group>"; };
 		742C642B1E9C89E000B8E327 /* MoviesListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MoviesListTableViewCell.m; path = ../../../MoviesListTableViewCell.m; sourceTree = "<group>"; };
 		742C64301E9C901A00B8E327 /* Film.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Film.h; sourceTree = "<group>"; };
@@ -384,8 +384,8 @@
 		742C64231E9C7A3900B8E327 /* Builder */ = {
 			isa = PBXGroup;
 			children = (
-				742C64241E9C7A3900B8E327 /* MoviesListBuilder.h */,
-				742C64251E9C7A3900B8E327 /* MoviesListBuilder.m */,
+				742C64241E9C7A3900B8E327 /* MoviesListModuleBuilder.h */,
+				742C64251E9C7A3900B8E327 /* MoviesListModuleBuilder.m */,
 			);
 			path = Builder;
 			sourceTree = "<group>";
@@ -904,7 +904,7 @@
 				F431DAFBD7C87A621115DB69 /* MoviesListRouter.m in Sources */,
 				DD6D95601FAD029C00305B20 /* Film+DisplayAdditions.m in Sources */,
 				DD6D955C1FACFB3F00305B20 /* MoviesListDisplayItem.m in Sources */,
-				742C64261E9C7A3900B8E327 /* MoviesListBuilder.m in Sources */,
+				742C64261E9C7A3900B8E327 /* MoviesListModuleBuilder.m in Sources */,
 				3E428908FB520AB4DF020ACC /* DetailsViewInput.swift in Sources */,
 				C7DB85D5B1453F3151459F19 /* DetailsViewOutput.swift in Sources */,
 				DD5020DF1FAD0EEE007E2811 /* DataStore.m in Sources */,

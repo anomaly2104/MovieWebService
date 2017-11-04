@@ -1,12 +1,12 @@
 //
-//  MoviesListAssembly.m
+//  MoviesListModuleBuilder.m
 //  MovieWebService
 //
 //  Created by testDev on 11/04/2017.
 //  Copyright © 2017 Agoda Services Co. Ltd. All rights reserved.
 //
 
-#import "MoviesListBuilder.h"
+#import "MoviesListModuleBuilder.h"
 
 #import "MoviesListViewController.h"
 #import "MoviesListInteractor.h"
@@ -17,7 +17,7 @@
 
 static NSString *MoviesListControllerIdentifier = @"MoviesListController";
 
-@implementation MoviesListBuilder
+@implementation MoviesListModuleBuilder
 
 - (UIViewController *)build {
     

@@ -7,7 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "MoviesListBuilder.h"
+#import "MoviesListModuleBuilder.h"
 #import "MoviesListViewController.h"
 #import "MoviesListPresenter.h"
 #import "MoviesListInteractor.h"
@@ -22,7 +22,7 @@
 @implementation MoviesListModuleBuilderTests
 
 - (void)testBuildingViewController {
-    MoviesListBuilder *builder = [MoviesListBuilder new];
+    MoviesListModuleBuilder *builder = [MoviesListModuleBuilder new];
     UIViewController *viewController = [builder build];
     
     XCTAssertNotNil(viewController);

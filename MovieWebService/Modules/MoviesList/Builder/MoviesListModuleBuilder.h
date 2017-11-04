@@ -1,5 +1,5 @@
 //
-//  MoviesListAssembly.h
+//  MoviesListModuleBuilder.h
 //  MovieWebService
 //
 //  Created by testDev on 11/04/2017.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MoviesListBuilder: NSObject
+@interface MoviesListModuleBuilder: NSObject
 
 - (UIViewController *)build;
 
