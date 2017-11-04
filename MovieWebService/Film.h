@@ -22,14 +22,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Film : NSObject
 
-@property (nonatomic) FilmRating filmRating;
-@property (nonatomic) NSArray *languages;
-@property (nonatomic) NSDate *releaseDate;
-@property (nonatomic) NSArray<Actor*> *cast;
-@property (nonatomic, copy) NSString *name;
-@property (nonatomic) double rating;
-@property (nonatomic, strong) Director *director;
-@property (nonatomic) BOOL nominated;
+@property (readonly, nonatomic) FilmRating filmRating;
+@property (readonly, nonatomic) NSArray *languages;
+@property (readonly, nonatomic) NSDate *releaseDate;
+@property (readonly, nonatomic) NSArray<Actor*> *cast;
+@property (readonly, nonatomic, copy) NSString *name;
+@property (readonly, nonatomic) double rating;
+@property (readonly, nonatomic, strong) Director *director;
+@property (readonly, nonatomic) BOOL nominated;
 
 - (id)initWithData:(NSDictionary *)data;
 

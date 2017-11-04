@@ -11,6 +11,6 @@
 
 @interface Actor : GenericRole
 
-@property (nonatomic, copy) NSString *screenName;
+@property (readonly, nonatomic, copy) NSString *screenName;
 
 @end
