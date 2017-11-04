@@ -27,13 +27,13 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JjW-9b-sJX">
-                                            <rect key="frame" x="8" y="8" width="288.5" height="18"/>
+                                            <rect key="frame" x="16" y="8" width="280.5" height="18"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8dD-rl-583">
-                                            <rect key="frame" x="8" y="34" width="288.5" height="17.5"/>
+                                            <rect key="frame" x="16" y="34" width="280.5" height="17.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -61,7 +61,7 @@
                                         <constraint firstItem="8dD-rl-583" firstAttribute="top" secondItem="JjW-9b-sJX" secondAttribute="bottom" constant="8" id="SYf-eQ-dXT"/>
                                         <constraint firstItem="KS5-uC-HKv" firstAttribute="leading" secondItem="JjW-9b-sJX" secondAttribute="trailing" constant="8" id="cg6-nG-MtW"/>
                                         <constraint firstItem="Glb-3R-hE1" firstAttribute="height" secondItem="KS5-uC-HKv" secondAttribute="height" id="jon-jy-FwS"/>
-                                        <constraint firstAttribute="leadingMargin" secondItem="JjW-9b-sJX" secondAttribute="leading" id="l9P-eT-Hra"/>
+                                        <constraint firstAttribute="leadingMargin" secondItem="JjW-9b-sJX" secondAttribute="leading" constant="-8" id="l9P-eT-Hra"/>
                                         <constraint firstItem="8dD-rl-583" firstAttribute="leading" secondItem="JjW-9b-sJX" secondAttribute="leading" id="n3k-nr-NRP"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="Glb-3R-hE1" secondAttribute="bottom" id="ncM-Pl-RE3"/>
                                         <constraint firstAttribute="topMargin" secondItem="JjW-9b-sJX" secondAttribute="top" id="pxH-zA-aOc"/>
