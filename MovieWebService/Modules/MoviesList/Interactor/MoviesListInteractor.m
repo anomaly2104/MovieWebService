@@ -9,7 +9,7 @@
 #import "MoviesListInteractor.h"
 
 #import "MoviesListInteractorOutput.h"
-#import "Film.h"
+#import "Movie.h"
 #import "AppDelegate.h"
 #import "DataStore.h"
 
@@ -19,7 +19,7 @@
 
 - (void)findMoviesList {
     __weak typeof(self) welf = self;
-    [self.dataStore getMoviesWithCallback:^(NSArray<Film *> *movies) {
+    [self.dataStore getMoviesWithCallback:^(NSArray<Movie *> *movies) {
         [welf.output foundMoviesList:movies];
     }];
 }

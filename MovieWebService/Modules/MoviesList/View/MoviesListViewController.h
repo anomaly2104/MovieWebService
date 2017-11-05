@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 
 #import "MoviesListViewInput.h"
-#import "Film.h"
 
 @protocol MoviesListViewOutput;
 

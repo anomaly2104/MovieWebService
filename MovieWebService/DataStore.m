@@ -7,12 +7,12 @@
 //
 
 #import "DataStore.h"
-#import "Film.h"
+#import "Movie.h"
 #import <TDTChocolate/TDTFoundationAdditions.h>
 
 @implementation DataStore
 
-- (void)getMoviesWithCallback:(void (^)(NSArray<Film *> *movies))callback {
+- (void)getMoviesWithCallback:(void (^)(NSArray<Movie *> *movies))callback {
     dispatch_async(dispatch_get_global_queue(QOS_CLASS_UTILITY, 0), ^{
         NSDictionary *data = @{@"filmRating": @3,
                                @"languages": @[ @"English", @"Thai" ],
@@ -34,15 +34,15 @@
                                                }
                                };
         
-        Film* film = [[Film alloc] initWithData:data];
-        callback(@[film]);
+        Movie *movie = [[Movie alloc] initWithData:data];
+        callback(@[movie]);
     });
 }
 
 - (void)getMovieWithName:(NSString *)movieName
-                callback:(void (^)(Film *movie))callback {
-    [self getMoviesWithCallback:^(NSArray<Film *> *movies) {
-        Film *movie = [movies tdt_objectPassingTest:^BOOL(Film *movie) {
+                callback:(void (^)(Movie *movie))callback {
+    [self getMoviesWithCallback:^(NSArray<Movie *> *movies) {
+        Movie *movie = [movies tdt_objectPassingTest:^BOOL(Movie *movie) {
             return [movie.name isEqualToString:movieName];
         }];
         callback(movie);

@@ -51,11 +51,11 @@ class DetailsInteractorTests: XCTestCase {
     // MARK: - Mock
     
     class MockDataStore: DataStore {
-        let testMovie = Film()
+        let testMovie = Movie()
         var isGetMovieCalled: Bool = false
         var getMovieCalledParam: String? = nil
         
-        override func getMovieWithName(_ movieName: String!, callback: ((Film?) -> Void)!) {
+        override func getMovieWithName(_ movieName: String!, callback: ((Movie?) -> Void)!) {
             isGetMovieCalled = true
             getMovieCalledParam = movieName
 
@@ -65,9 +65,9 @@ class DetailsInteractorTests: XCTestCase {
 
     class MockOutput: DetailsInteractorOutput {
         var isFoundMovieCalled: Bool = false
-        var foundMovieCalledParam: Film? = nil
+        var foundMovieCalledParam: Movie? = nil
         
-        func foundMovie(movie: Film?) {
+        func foundMovie(movie: Movie?) {
             isFoundMovieCalled = true
             foundMovieCalledParam = movie
         }

@@ -1,5 +1,5 @@
 //
-//  Film.h
+//  Movie.h
 //  MovieWebService
 //
 //  Created by testDev on 4/11/17.
@@ -20,7 +20,7 @@ typedef enum {
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Film : NSObject
+@interface Movie : NSObject
 
 @property (readonly, nonatomic) FilmRating filmRating;
 @property (readonly, nonatomic) NSArray *languages;

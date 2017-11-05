@@ -1,5 +1,5 @@
 //
-//  FilmTests.m
+//  MovieTests.m
 //  MovieWebService
 //
 //  Created by Agarwal, Udit on 11/5/17.
@@ -7,13 +7,13 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "Film.h"
+#import "Movie.h"
 
-@interface FilmTests : XCTestCase
+@interface MovieTests : XCTestCase
 
 @end
 
-@implementation FilmTests
+@implementation MovieTests
 
 - (void)testGenericRoleDataIsParsedCorrectly {
     NSDate *releaseDate = [NSDate distantFuture];
@@ -41,7 +41,7 @@
                            };
     
     
-    Film *movie = [[Film alloc] initWithData:data];
+    Movie *movie = [[Movie alloc] initWithData:data];
     
     XCTAssertEqual(3, movie.filmRating);
     XCTAssertEqualObjects(releaseDate, movie.releaseDate);

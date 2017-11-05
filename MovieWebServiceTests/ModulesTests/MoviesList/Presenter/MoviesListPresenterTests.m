@@ -15,7 +15,7 @@
 #import "MoviesListInteractorInput.h"
 #import "MoviesListRouterInput.h"
 #import "MoviesListDisplayItem.h"
-#import "Film.h"
+#import "Movie.h"
 #import <DateTools/DateTools.h>
 
 @interface MoviesListPresenterTests : XCTestCase
@@ -89,25 +89,25 @@
     }]];
     
     
-    NSArray *testMovieList = @[[self filmWithName:@"TestMovie"
-                                      releaseDate:[NSDate dateWithYear:2012
-                                                                 month:10
-                                                                   day:12]
-                                       filmRating:@3
-                                           rating:@7.8]];
+    NSArray *testMovieList = @[[self movieWithName:@"TestMovie"
+                                       releaseDate:[NSDate dateWithYear:2012
+                                                                  month:10
+                                                                    day:12]
+                                        filmRating:@3
+                                            rating:@7.8]];
     [self.presenter foundMoviesList:testMovieList];
     
     [self.mockRouter verify];
 }
 
-- (Film *)filmWithName:(NSString *)name
-           releaseDate:(NSDate *)releaseDate
-            filmRating:(NSNumber *)filmRating
-                rating:(NSNumber *)rating {
-    return [[Film alloc] initWithData:@{ @"name": name,
-                                         @"filmRating": filmRating,
-                                         @"releaseDate": @([releaseDate timeIntervalSince1970]),
-                                         @"rating": rating }];
+- (Movie *)movieWithName:(NSString *)name
+             releaseDate:(NSDate *)releaseDate
+              filmRating:(NSNumber *)filmRating
+                  rating:(NSNumber *)rating {
+    return [[Movie alloc] initWithData:@{ @"name": name,
+                                          @"filmRating": filmRating,
+                                          @"releaseDate": @([releaseDate timeIntervalSince1970]),
+                                          @"rating": rating }];
 }
 
 @end

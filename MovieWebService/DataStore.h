@@ -8,13 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-@class Film;
+@class Movie;
 
 @interface DataStore : NSObject
 
-- (void)getMoviesWithCallback:(void (^)(NSArray<Film *> *movies))callback;
+- (void)getMoviesWithCallback:(void (^)(NSArray<Movie *> *movies))callback;
 
 - (void)getMovieWithName:(NSString *)movieName
-                callback:(void (^)(Film *movie))callback;
+                callback:(void (^)(Movie *movie))callback;
 
 @end

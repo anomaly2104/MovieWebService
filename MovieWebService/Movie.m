@@ -1,16 +1,16 @@
 //
-//  Film.m
+//  Movie.m
 //  MovieWebService
 //
 //  Created by testDev on 4/11/17.
 //  Copyright © 2017 TestCompany. All rights reserved.
 //
 
-#import "Film.h"
+#import "Movie.h"
 #import "Actor.h"
 #import "Director.h"
 
-@implementation Film
+@implementation Movie
 
 - (id)initWithData:(NSDictionary *)data {
     self = [super init];

@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@class Film;
+@class Movie;
 
 @interface GenericRole : NSObject
 
@@ -17,9 +17,9 @@
 @property (readonly, nonatomic, strong) NSDate *dateOfBirth;
 @property (readonly, nonatomic) BOOL nominated;
 
-@property (readonly, nonatomic, weak) Film *movie;
+@property (readonly, nonatomic, weak) Movie *movie;
 
 - (id)initWithData:(NSDictionary *)data
-          forMovie:(Film *)movie;
+          forMovie:(Movie *)movie;
 
 @end

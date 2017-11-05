@@ -1,17 +1,17 @@
 //
-//  Film+DisplayAdditions.m
+//  Movie+DisplayAdditions.m
 //  MovieWebService
 //
 //  Created by Agarwal, Udit on 11/4/17.
 //  Copyright © 2017 TestCompany. All rights reserved.
 //
 
-#import "Film+DisplayAdditions.h"
+#import "Movie+DisplayAdditions.h"
 #import <DateTools/DateTools.h>
 
 #define InvalidRating NSLocalizedString(@"Invalid Rating", @"Text for invalid value of film rating.");
 
-@implementation Film (DisplayAdditions)
+@implementation Movie (DisplayAdditions)
 
 - (NSString *)releaseDateDisplayText {
     return [self.releaseDate formattedDateWithStyle:NSDateFormatterMediumStyle];

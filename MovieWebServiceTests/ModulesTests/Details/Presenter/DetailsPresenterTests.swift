@@ -59,10 +59,10 @@ class DetailsPresenterTests: XCTestCase {
     }
     
     func testItCreatesCorrectDisplayItemOnReceivingMovieFromInteractor() {
-        let movie = Film(data: ["name": "movieName",
-                                "director": ["name": "directorName"],
-                                "casts": [["name": "actorName",
-                                           "screenName": "actorScreenName"]]])
+        let movie = Movie(data: ["name": "movieName",
+                                 "director": ["name": "directorName"],
+                                 "casts": [["name": "actorName",
+                                            "screenName": "actorScreenName"]]])
         presenter.foundMovie(movie: movie)
         XCTAssertTrue(view.showDetailsForDetailDisplayItemCalled)
         let displayItem = view.showDetailsForDetailDisplayItemParam!
@@ -81,9 +81,9 @@ class DetailsPresenterTests: XCTestCase {
     }
     
     func testItCreatesCorrectDisplayItemOnReceivingMovieWithoutActorFromInteractor() {
-        let movie = Film(data: ["name": "movieName",
-                                "director": ["name": "directorName"],
-                                "casts": []])
+        let movie = Movie(data: ["name": "movieName",
+                                 "director": ["name": "directorName"],
+                                 "casts": []])
         
         presenter.foundMovie(movie: movie)
         XCTAssertTrue(view.showDetailsForDetailDisplayItemCalled)

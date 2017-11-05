@@ -56,7 +56,7 @@
 - (void)testFoundMoviesListFromInteractorWillHaveItemsReceivedFromDataStore {
     NSArray *mockMovieList = OCMClassMock([NSArray class]);
     [[[self.mockDataStore stub] andDo:^(NSInvocation *invocation) {
-        void (^completionBlock)(NSArray<Film *> *movies) = NULL;
+        void (^completionBlock)(NSArray<Movie *> *movies) = NULL;
         [invocation getArgument:&completionBlock atIndex:2];
         completionBlock(mockMovieList);
     }] getMoviesWithCallback:OCMOCK_ANY];

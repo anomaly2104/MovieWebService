@@ -1,14 +1,14 @@
 //
-//  Film+DisplayAdditions.h
+//  Movie+DisplayAdditions.h
 //  MovieWebService
 //
 //  Created by Agarwal, Udit on 11/4/17.
 //  Copyright © 2017 TestCompany. All rights reserved.
 //
 
-#import "Film.h"
+#import "Movie.h"
 
-@interface Film (DisplayAdditions)
+@interface Movie (DisplayAdditions)
 
 - (NSString *)releaseDateDisplayText;
 
