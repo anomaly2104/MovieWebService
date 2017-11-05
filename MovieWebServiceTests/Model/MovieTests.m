@@ -15,7 +15,7 @@
 
 @implementation MovieTests
 
-- (void)testGenericRoleDataIsParsedCorrectly {
+- (void)testMovieDataIsParsedCorrectlyIntoMovieObject {
     NSDate *releaseDate = [NSDate distantFuture];
     NSDate *actorDob = [NSDate distantPast];
     NSDate *directorDob = [NSDate distantPast];
